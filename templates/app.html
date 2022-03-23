@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Store Management Software</title>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <style>
+        [v-cloak] {
+            display: none
+        }
+        #app{
+                width: 100%;
+        }
+    </style>
+</head>
+<body class="body">
+{% csrf_token %}
+<v-app id="app" v-cloak>
+    <router-view></router-view>
+</v-app>
+<script src="{% static 'js/app.js' %}" defer></script>
+
+</body>
+</html>
