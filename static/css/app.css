@@ -2,3 +2,9 @@ body {
   overflow-x: hidden;
 }
 
+.custom-table-adjust_top .header-pane .text-h5 {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  letter-spacing: 0.0125em !important;
+}
+

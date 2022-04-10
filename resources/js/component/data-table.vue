@@ -31,33 +31,35 @@
                     <slot :name="name" v-bind="item"></slot>
                 </template>
                 <template v-slot:item.actions="{ item }">
-                    <v-icon
-                            small
-                            class="mr-2"
+                  <div class="d-flex">
+                  <v-btn x-small
+                            class="mr-2 text-none"
                             @click="$emit('updateModal',item)"
                             color="info"
-                    >
-                        mdi-pencil
-                    </v-icon>
+                  >
+                   Edit
+                  </v-btn>
 
-                    <v-icon
-                            small
+                    <v-btn
+                            x-small
                             @click="deleteItem(item)"
                             color="error"
+                            class="text-none"
                     >
-                        mdi-delete
-                    </v-icon>
+                        Delete
+                    </v-btn>
+                  </div>
                 </template>
             </v-data-table>
-            <v-dialog v-model="dialogDelete" max-width="500px">
-                <v-card>
-                    <v-card-title class="text-h5 delete-modal-title">
+            <v-dialog v-model="dialogDelete" max-width="320px">
+                <v-card class="pa-3">
+                    <v-card-text class="text-h6 delete-modal-title text-center justify-center pa-3 red--text">
                         Are you sure you want to delete this item?
-                    </v-card-title>
+                    </v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
-                        <v-btn color="blue darken-1" text @click="closeDelete">Cancel</v-btn>
-                        <v-btn color="blue darken-1" text @click="deleteItemConfirm">OK</v-btn>
+                        <v-btn color="blue darken-1"  @click="closeDelete" class="white--text text-none">Cancel</v-btn>
+                        <v-btn color="red darken-1"  @click="deleteItemConfirm" class="white--text text-none">OK</v-btn>
                         <v-spacer></v-spacer>
                     </v-card-actions>
                 </v-card>

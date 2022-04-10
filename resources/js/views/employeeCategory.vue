@@ -2,61 +2,62 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="4">
-        <v-card class="my-2">
-          <v-form @submit.prevent="addItem()" ref="form">
-            <v-card-title class="justify-end">
-              <span class="text-h6">Add Expense Category</span>
-              <v-spacer></v-spacer>
-            </v-card-title>
-            <v-card-text>
-              <v-container>
-                <v-row>
+        <v-card>
+        <v-form @submit.prevent="addItem()" ref="form">
+          <v-card-title class="justify-end">
+            <span class="text-h6 font-weight-bold">Add Employee Category</span>
+            <v-spacer></v-spacer>
+            <v-btn @click="addModal=false" small text class="text-none">
+              Close
+            </v-btn>
+          </v-card-title>
+          <v-card-text>
+            <v-container>
+              <v-row>
 
-                  <v-col
-                      cols="12"
-                  >
-                    <v-text-field
-                        label="Name"
-                        outlined
-                        dense
-                        :rules="[v=> !!v || 'Name is required']"
-                        v-model="form.name"
-                    ></v-text-field>
-                  </v-col>
-                </v-row>
-                <v-btn
-                    color="primary"
-                    class="text-none font-weight-bold"
-                    type="submit"
-                    small
+                <v-col
+                    cols="12"
                 >
-                  Submit
-                </v-btn>
-              </v-container>
-            </v-card-text>
-          </v-form>
-        </v-card>
+                  <v-text-field
+                      label="Name"
+                      outlined
+                      dense
+                      :rules="[v=> !!v || 'Name is required']"
+                      v-model="form.name"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-btn
+                  color="primary"
+                  class="text-none font-weight-bold"
+                  type="submit"
+                  small
+              >
+                Submit
+              </v-btn>
+            </v-container>
+          </v-card-text>
+        </v-form>
+      </v-card>
       </v-col>
-      <v-col cols="12" md="8">
-        <v-card class="my-2 pa-3">
-          <data-table
-              :url="url"
-              :tableHeadline=" 'Manage Expense Category'"
-              :headers="headers"
-              class="custom-table-adjust_top mx-5"
-              ref="dataTable"
-              app_name="expenseCategory"
-              @updateModal="updateModal"
-          >
-          </data-table>
-        </v-card>
-      </v-col>
+      <v-col cols="12" md="8"><v-card class="my-2 pa-3">
+      <data-table
+          :url="url"
+          :tableHeadline="'Manage Employee Category'"
+          :headers="headers"
+          class="custom-table-adjust_top mx-5"
+          ref="dataTable"
+          app_name="employeeCategory"
+          @updateModal="updateModal"
+      >
+      </data-table>
+    </v-card></v-col>
     </v-row>
     <v-dialog v-model="editModal" max-width="600px" overlay-opacity="0.9">
       <v-card>
         <v-form @submit.prevent="updateItem()" ref="editForm">
           <v-card-title class="justify-end">
-            <span class="text-h5">Update Expense Category</span>
+            <span class="text-h5">Update Employee Category</span>
             <v-spacer></v-spacer>
             <v-btn @click="editModal=false" small text class="text-none">
               Close
@@ -101,11 +102,11 @@
 import DataTable from "../component/data-table";
 
 export default {
-  name: "unit",
+  name: "employeeCategory",
   components: {DataTable},
   data() {
     return {
-      url: 'expense-category/',
+      url: 'employee-category/',
       headers: [
         {text: 'Name', value: 'name'},
         {text: 'Action', value: 'actions', width: '100px', align: 'center', sortable: false},
@@ -161,6 +162,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped>
 
 </style>

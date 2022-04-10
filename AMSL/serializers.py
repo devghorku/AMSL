@@ -1,6 +1,10 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 from expense.models import Expense, ExpenseCategory
+from income.models import Income, IncomeCategory
+from employee.models import EmployeeCategory, Employee
+from payroll.models import Payroll
+from invoice.models import InvoiceItem, Invoice
 
 
 # from product.models import Product
@@ -39,6 +43,82 @@ class ExpensePostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Expense
         fields = '__all__'
+
+
+# Income Serializer
+class IncomeCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IncomeCategory
+        fields = '__all__'
+
+
+class IncomeSerializer(serializers.ModelSerializer):
+    category = IncomeCategorySerializer()
+
+    class Meta:
+        model = Income
+        fields = '__all__'
+
+
+class IncomePostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Income
+        fields = '__all__'
+
+
+# employee serializer
+class EmployeeCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EmployeeCategory
+        fields = '__all__'
+
+
+class EmployeeSerializer(serializers.ModelSerializer):
+    category = EmployeeCategorySerializer()
+
+    class Meta:
+        model = Employee
+        fields = '__all__'
+
+
+class EmployeePostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Employee
+        fields = '__all__'
+
+
+class PayrollSerializer(serializers.ModelSerializer):
+    employee = EmployeeSerializer()
+
+    class Meta:
+        model = Payroll
+        fields = '__all__'
+
+
+class PayrollPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Payroll
+        fields = '__all__'
+
+
+class InvoiceItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InvoiceItem
+        fields = '__all__'
+
+
+class InvoiceSerializer(serializers.ModelSerializer):
+    invoices = InvoiceItemSerializer(source='invoice_set')
+
+    class Meta:
+        model = Invoice
+        fields = '__all__'
+
+class InvoicePostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Payroll
+        fields = '__all__'
+
 # class ProductTypeSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = ProductType

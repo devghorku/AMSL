@@ -3,120 +3,117 @@
     <v-row>
       <v-col cols="12" md="4">
         <v-card class="my-2">
-          <v-form @submit.prevent="addItem()" ref="form">
-            <v-card-title class="justify-end">
-              <span class="text-h6 font-weight-bold">Add Expense</span>
-              <v-spacer></v-spacer>
-            </v-card-title>
-            <v-card-text>
-              <v-container>
-                <v-row dense>
-                  <v-col
-                      cols="12"
-                  >
-                    <v-autocomplete
-                        label="Category"
-                        outlined
-                        dense
-                        :items="expenseCategoryList"
-                        item-text="name"
-                        item-value="id"
-                        :rules="[v=> !!v || 'Category is required']"
-                        v-model="form.category"
-                    ></v-autocomplete>
-                  </v-col>
-                  <v-col
-                      cols="12"
-                  >
-                    <v-text-field
-                        label="Amount"
-                        outlined
-                        dense
-                        type="number"
-                        :rules="[v=> !!v || 'Amount is required']"
-                        v-model="form.amount"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col
-                      cols="12"
-                  >
-                    <v-textarea
-                        label="Descriptions"
-                        outlined
-                        dense
-                        type="text"
-                        rows="2"
-                        :rules="[v=> !!v || 'Description is required']"
-                        v-model="form.description"
-                    ></v-textarea>
-                  </v-col>
-                  <v-col
-                      cols="12"
-                  >
-                    <v-menu
-                        v-model="menu2"
-                        :close-on-content-click="false"
-                        :nudge-right="40"
-                        transition="scale-transition"
-                        offset-y
-                        min-width="auto"
-                    >
-                      <template v-slot:activator="{ on, attrs }">
-                        <v-text-field
-                            label="Date"
-                            outlined
-                            dense
-                            readonly
-                            v-bind="attrs"
-                            v-on="on"
-                            :rules="[v=> !!v || 'field is required']"
-                            v-model="form.date"
-                        ></v-text-field>
-                      </template>
-                      <v-date-picker
-                          v-model="form.date"
-                          @input="menu2 = false"
-                      ></v-date-picker>
-                    </v-menu>
-
-                  </v-col>
-                </v-row>
-                <v-btn
-                    color="primary"
-                    class="text-none font-weight-bold"
-                    type="submit"
-                    small
+        <v-form @submit.prevent="addItem()" ref="form">
+          <v-card-title class="justify-end">
+            <span class="text-h6 font-weight-bold">Add Income</span>
+            <v-spacer></v-spacer>
+          </v-card-title>
+          <v-card-text>
+            <v-container>
+              <v-row dense>
+                <v-col
+                    cols="12"
                 >
-                  Submit
-                </v-btn>
-              </v-container>
-            </v-card-text>
-          </v-form>
-        </v-card>
+                  <v-autocomplete
+                      label="Category"
+                      outlined
+                      dense
+                      :items="incomeCategoryList"
+                      item-text="name"
+                      item-value="id"
+                      :rules="[v=> !!v || 'Category is required']"
+                      v-model="form.category"
+                  ></v-autocomplete>
+                </v-col>
+                <v-col
+                    cols="12"
+                >
+                  <v-text-field
+                      label="Amount"
+                      outlined
+                      dense
+                      type="number"
+                      :rules="[v=> !!v || 'Amount is required']"
+                      v-model="form.amount"
+                  ></v-text-field>
+                </v-col>
+                <v-col
+                    cols="12"
+                >
+                  <v-textarea
+                      label="Description"
+                      outlined
+                      dense
+                      type="text"
+                      rows="2"
+                      :rules="[v=> !!v || 'Description is required']"
+                      v-model="form.description"
+                  ></v-textarea>
+                </v-col>
+                <v-col
+                    cols="12"
+                >
+                  <v-menu
+                      v-model="menu2"
+                      :close-on-content-click="false"
+                      :nudge-right="40"
+                      transition="scale-transition"
+                      offset-y
+                      min-width="auto"
+                  >
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-text-field
+                          label="Date"
+                          outlined
+                          dense
+                          readonly
+                          v-bind="attrs"
+                          v-on="on"
+                          :rules="[v=> !!v || 'field is required']"
+                          v-model="form.date"
+                      ></v-text-field>
+                    </template>
+                    <v-date-picker
+                        v-model="form.date"
+                        @input="menu2 = false"
+                    ></v-date-picker>
+                  </v-menu>
+
+                </v-col>
+              </v-row>
+              <v-btn
+                  color="primary"
+                  class="text-none font-weight-bold"
+                  type="submit"
+                  small
+              >
+                Submit
+              </v-btn>
+            </v-container>
+          </v-card-text>
+        </v-form>
+      </v-card>
       </v-col>
       <v-col cols="12" md="8">
-        <v-card class="my-2 pa-3">
+        <v-card class="my-2 pa-5">
           <data-table
               :url="url"
-              :tableHeadline="'Manage Expense'"
+              :tableHeadline="'Manage Income'"
               :headers="headers"
-              addBtnLink="addCountry"
-              editBtnLink="editCountry"
-              class="custom-table-adjust_top"
+              class="custom-table-adjust_top mx-5"
               ref="dataTable"
-              app_name="country"
+              app_name="income"
               @updateModal="updateModal"
           >
           </data-table>
         </v-card>
       </v-col>
     </v-row>
-
     <v-dialog v-model="editModal" max-width="600px" overlay-opacity="0.9">
       <v-card>
         <v-form @submit.prevent="updateItem()" ref="editForm">
           <v-card-title class="justify-end">
-            <span class="text-h5">Update Expense</span>
+            <span class="text-h5">Update Income</span>
             <v-spacer></v-spacer>
             <v-btn @click="editModal=false" small text class="text-none">
               Close
@@ -132,7 +129,7 @@
                       label="Category"
                       outlined
                       dense
-                      :items="expenseCategoryList"
+                      :items="incomeCategoryList"
                       item-text="name"
                       item-value="id"
                       :rules="[v=> !!v || 'Category is required']"
@@ -218,11 +215,11 @@ import DataTable from "../component/data-table";
 import {mapGetters} from "vuex";
 
 export default {
-  name: "expense",
+  name: "income",
   components: {DataTable},
   data() {
     return {
-      url: 'expense/',
+      url: 'income/',
       headers: [
         {text: 'Category', value: 'category.name'},
         {text: 'Amount', value: 'amount'},
@@ -244,10 +241,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['expenseCategoryList'])
+    ...mapGetters(['incomeCategoryList'])
   },
   async mounted() {
-    await this.$store.dispatch('getExpenseCategory')
+    await this.$store.dispatch('getIncomeCategory')
   },
   methods: {
     updateModal(form) {

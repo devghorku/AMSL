@@ -5,7 +5,7 @@
         :clipped="true"
         fixed
         app
-        color="primary"
+        color="#2D3744"
         dark
     >
       <!--            <v-list dense>-->
@@ -22,26 +22,31 @@
       <!--                </template>-->
 
       <!--            </v-list>-->
-      <v-list dense active-class="white--text">
-      <v-list-group sub-group active-class="white--text"
+      <v-list dense>
+      <v-list-group
+        v-for="item in items"
+        :key="item.title"
+        no-action
+        active-class="list_group"
       >
         <template v-slot:activator>
-          <v-list-item-title>Expense</v-list-item-title>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" style="font-size: 16px;"></v-list-item-title>
+          </v-list-item-content>
         </template>
-
-  <v-list-item to="/expense" active-class="white--text"><v-list-item-title>Expense</v-list-item-title>
-        </v-list-item>
-        <v-divider/>
-        <v-list-item to="/expense-category" active-class="white--text"><v-list-item-title>Expense Category</v-list-item-title>
-        </v-list-item>
-         <v-divider/>
- <v-list-item to="/expense-category" active-class="white--text"><v-list-item-title>Expense Category</v-list-item-title>
-        </v-list-item>
-         <v-divider/>
-         <v-list-item to="/expense-category" active-class="white--text"><v-list-item-title>Expense Category</v-list-item-title>
+          <v-divider></v-divider>
+        <v-list-item
+          v-for="child in item.items"
+          :key="child.title"
+          :to="child.link"
+          active-class="list_item"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title" ></v-list-item-title>
+          </v-list-item-content>
         </v-list-item>
       </v-list-group>
-      </v-list>
+    </v-list>
     </v-navigation-drawer>
     <v-app-bar
         :clipped-left="true"
@@ -101,14 +106,27 @@ export default {
   },
   data: () => ({
     items: [
-      {title: 'Dashboard', link: '/', icon: 'mdi-grid'},
-      {title: 'Expense ', link: '/import', icon: 'mdi-grid'},
-      {title: 'Export', link: '/export', icon: 'mdi-grid'},
-      {title: 'Product', link: '/product', icon: 'mdi-grid'},
-      {title: 'Product Type', link: '/product-type', icon: 'mdi-grid'},
-      {title: 'Unit', link: '/unit', icon: 'mdi-grid'},
-      {title: 'Report', link: '/report', icon: 'mdi-grid'},
-      {title: 'Backup', link: '/backup', icon: 'mdi-grid'},
+
+      {title: 'Expense ', link: '',items:[
+          {title:'Expense', link:'/expense'},
+          {title:'Expense Category', link:'/expense-category'}
+        ]},
+      {title: 'Income ', link: '',items:[
+          {title:'Income', link:'/income'},
+          {title:'Income Category', link:'/income-category'}
+        ]},
+      {title: 'Employee ', link: '',items:[
+          {title:'Employee', link:'/employee'},
+          {title:'Employee Category', link:'/employee-category'}
+        ]},
+      {title: 'Payroll ', link: '',items:[
+          {title:'Payroll', link:'/payroll'},
+        ]},
+      {title: 'Invoice ', link: '',items:[
+          {title:'Invoice', link:'/invoice'},
+          {title:'Invoice Items', link:'/invoice-items'}
+        ]},
+
     ],
     drawer: true,
   }),
@@ -120,3 +138,59 @@ export default {
   }
 };
 </script>
+<style scoped lang="scss">
+
+.v-list-group--active{
+  background: #171717;
+  .v-list-item--active {
+    .v-list-item__content {
+      .v-list-item__title {
+        font-weight: bold;
+
+        color: white !important;
+         background: #171717;
+      }
+    }
+  }
+
+    .v-list-group__items {
+      .v-list-item {
+        background: #171717;
+        color: gray;
+      }
+      .v-list-item--active {
+        background: #171717;
+        color: white;
+        &::before{
+          display: none !important;
+        }
+      }
+
+    }
+
+}
+.list_group{
+  font-weight: bold;
+  background: #171717;
+  v-list-group__items{
+    background: #171717;
+  }
+}
+.list_item{
+  font-weight: bold !important;
+  font-size:20px !important;
+  color:#171717;
+.v-list-item__content{
+   .v-list-item__title{
+    font-weight: bold;
+     color: white;
+  }
+}
+}
+
+.v-list-group__items{
+  .v-list-item {
+    padding-left: 40px !important;
+  }
+}
+</style>

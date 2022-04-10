@@ -5,8 +5,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import viewsets
-from AMSL.serializers import IncomePostSerializer, IncomeSerializer, IncomeCategorySerializer
-from .models import Income, IncomeCategory
+from AMSL.serializers import InvoicePostSerializer, InvoiceSerializer, InvoiceItemSerializer
+from .models import Invoice, InvoiceItem
 from AMSL.pagination import CustomPagination
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -15,26 +15,26 @@ from rest_framework.response import Response
 
 
 # Create your views here.
-class IncomeViewSet(viewsets.ModelViewSet):
-    queryset = Income.objects.all()
-    serializer_class = IncomeSerializer
+class InvoiceViewSet(viewsets.ModelViewSet):
+    queryset = Invoice.objects.all()
+    serializer_class = InvoiceSerializer
     filter_backends = (SearchFilter, OrderingFilter)
-    search_fields = ('category__name',)
-    ordering_fields = ('category',)
-    ordering = ('-category__id')
+    search_fields = ('Items__name',)
+    ordering_fields = ('Items',)
+    ordering = ('-Items__id')
     pagination_class = CustomPagination
     permission_classes = [IsAdminUser, IsAuthenticated]
 
     def get_serializer_class(self):
         if self.request.method == 'POST' or self.request.method == 'PATCH':
-            return IncomePostSerializer
+            return InvoicePostSerializer
         else:
-            return IncomeSerializer
+            return InvoiceSerializer
 
 
-class IncomeCategoryViewSet(viewsets.ModelViewSet):
-    queryset = IncomeCategory.objects.all()
-    serializer_class = IncomeCategorySerializer
+class InvoiceItemsViewSet(viewsets.ModelViewSet):
+    queryset = InvoiceItem.objects.all()
+    serializer_class = InvoiceItemSerializer
     filter_backends = (SearchFilter, OrderingFilter)
     search_fields = ('name',)
     ordering_fields = ('name',)
@@ -46,6 +46,6 @@ class IncomeCategoryViewSet(viewsets.ModelViewSet):
 
 
     def all(self, request, *args, **kwargs):
-        queryset = IncomeCategory.objects.all()
-        serializer = IncomeCategorySerializer(queryset, many=True)
+        queryset = InvoiceItem.objects.all()
+        serializer = InvoiceItemSerializer(queryset, many=True)
         return Response(serializer.data)

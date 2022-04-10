@@ -5,8 +5,15 @@ import VueRouter from 'vue-router'
 import store from "../store";
 import Home from '../views/dashboard'
 import ExpenseCategory from '../views/expenseCategory'
+import IncomeCategory from '../views/incomeCategory'
 import Expense from '../views/expense'
+import Income from '../views/income'
 import Login from '../views/login'
+import Employee from "../views/employee"
+import EmployeeCategory from "../views/employeeCategory"
+import Payroll from "../views/payroll"
+import Invoice from "../views/invoice"
+import InvoiceItems from "../views/invoiceItem"
 
 
 // import globalFunc from '../services/helper'
@@ -58,6 +65,41 @@ const router = new VueRouter({
                     path: 'expense-category',
                     name: 'expenseCategory',
                     component: ExpenseCategory,
+                },
+                {
+                    path: 'income',
+                    name: 'income',
+                    component: Income,
+                },
+               {
+                    path: 'income-category',
+                    name: 'incomeCategory',
+                    component: IncomeCategory,
+                },
+                {
+                    path: 'employee',
+                    name: 'employee',
+                    component: Employee,
+                },
+               {
+                    path: 'employee-category',
+                    name: 'employeeCategory',
+                    component: EmployeeCategory,
+                },
+                {
+                    path: 'payroll',
+                    name: 'payroll',
+                    component: Payroll,
+                },
+                {
+                    path: 'invoice',
+                    name: 'invoice',
+                    component: Invoice,
+                },
+                {
+                    path: 'invoice-items',
+                    name: 'invoiceItems',
+                    component: InvoiceItems,
                 },
             ]
         },
