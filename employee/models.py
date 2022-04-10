@@ -27,7 +27,7 @@ class Employee(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['-id']
+        ordering = ['-active']
 
     def __str__(self):
         return self.name

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'payroll',
     'corsheaders',
     'rest_framework',
+'django_filters',
 ]
 
 MIDDLEWARE = [

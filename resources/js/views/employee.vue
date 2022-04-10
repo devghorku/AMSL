@@ -11,13 +11,29 @@
           :url="url"
           :tableHeadline="'Manage Employee'"
           :headers="headers"
-          addBtnLink="addCountry"
-          editBtnLink="editCountry"
           class="custom-table-adjust"
           ref="dataTable"
-          app_name="country"
+          :otherFilter="{active:active}"
           @updateModal="updateModal"
       >
+        <template v-slot:other_filter>
+          <v-switch
+              @change="getData()"
+              v-model="active"
+              dense
+              inset
+              label="Is Active"
+              class="mx-4"
+          ></v-switch>
+        </template>
+        <template v-slot:item.status="{ item }">
+          <v-switch
+              @change="toggleItem(item)"
+              v-model="item.active"
+              dense
+              inset
+          ></v-switch>
+        </template>
       </data-table>
     </v-card>
     <v-dialog v-model="addModal" max-width="600px" overlay-opacity="0.9">
@@ -139,16 +155,6 @@
                       hide-details
                       v-model="form.description"
                   ></v-textarea>
-                </v-col>
-                <v-col
-                    cols="12"
-                >
-                  <v-checkbox
-                      v-model="form.active"
-                      label="Active"
-                      color="secondary"
-                      value="True"
-                  ></v-checkbox>
                 </v-col>
               </v-row>
               <v-btn
@@ -298,7 +304,7 @@
                       label="Not Active"
                       color="secondary"
                       value="False"
-                       class="ml-2"
+                      class="ml-2"
                   ></v-checkbox>
                 </v-col>
               </v-row>
@@ -332,18 +338,19 @@ export default {
     return {
       url: 'employee/',
       headers: [
-        {text: 'Category', value: 'category.name'},
         {text: 'Name', value: 'name'},
+        {text: 'Profession', value: 'category.name'},
         {text: 'Employee_ID', value: 'employee_id'},
-        {text: 'NID/Passport', value: 'nid'},
-        {text: 'Address', value: 'address'},
-        {text: 'Birth Date', value: 'birth_date'},
+        // {text: 'NID/Passport', value: 'nid'},
+        // {text: 'Address', value: 'address'},
+        // {text: 'Birth Date', value: 'birth_date'},
         {text: 'Description', value: 'description'},
-        {text: 'Active', value: 'active'},
+        {text: 'Active', value: 'status'},
         {text: 'Action', value: 'actions', width: '100px', align: 'center', sortable: false},
       ],
       menu2: false,
-      form: {employee_id:null, nid:null, birth_date:null},
+      active:true,
+      form: {employee_id: null, nid: null, birth_date: null},
       editForm: {},
       deleteItem: {},
       addModal: false,
@@ -362,6 +369,12 @@ export default {
     await this.$store.dispatch('getEmployeeCategory')
   },
   methods: {
+    getData(){
+      this.$nextTick(()=>{
+        this.$refs.dataTable.getData();
+      })
+
+    },
     updateModal(form) {
       this.editForm = JSON.parse(JSON.stringify(form));
       this.editForm.category = form.category.id
@@ -382,7 +395,6 @@ export default {
 
     },
     async updateItem() {
-      console.log(this.editForm)
       if (this.$refs.editForm.validate()) {
         try {
 
@@ -394,6 +406,15 @@ export default {
         } catch (err) {
           this.$globalFunc.errorAlert(err.response)
         }
+      }
+    },
+    async toggleItem(item) {
+      try {
+        const res = await this.$api.patch(this.url + item.id + '/', {active: item.active});
+        await this.$store.dispatch('set_alert', {msg: 'Update Successfully', type: 'success'});
+        this.$refs.dataTable.getData();
+      } catch (err) {
+        this.$globalFunc.errorAlert(err.response)
       }
     },
 

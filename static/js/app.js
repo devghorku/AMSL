@@ -2494,10 +2494,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
 //
 //
 //
@@ -2597,18 +2605,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return [];
       }
     },
-    addBtnLink: {
-      type: String,
-      "default": function _default() {
-        return '';
-      }
-    },
-    editBtnLink: {
-      type: String,
-      "default": function _default() {
-        return '';
-      }
-    },
     searchField: {
       type: Boolean,
       "default": function _default() {
@@ -2621,29 +2617,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return true;
       }
     },
-    detailsBtn: {
-      type: Boolean,
-      "default": function _default() {
-        return false;
-      }
-    },
-    detailsBtnLink: {
-      type: String,
-      "default": function _default() {
-        return '';
-      }
-    },
-    exportButton: {
-      type: Boolean,
-      "default": function _default() {
-        return false;
-      }
-    },
-    importButton: {
-      type: Boolean,
-      "default": function _default() {
-        return false;
-      }
+    otherFilter: {
+      type: Object,
+      "default": function _default() {}
     }
   },
   data: function data() {
@@ -2666,33 +2642,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       deep: true
     }
   },
-  computed: {// checkAddButtonPerm() {
-    //     if (this.app_name) {
-    //         return !!this.$globalFunc.isPermit('add_' + this.app_name);
-    //     }
-    //     return true
-    // },
-    // checkDeleteButtonPerm() {
-    //     if (this.app_name) {
-    //         return !!this.$globalFunc.isPermit('delete_' + this.app_name);
-    //     }
-    //     return true
-    // },
-    // checkEditButtonPerm() {
-    //     if (this.app_name) {
-    //
-    //         return !!this.$globalFunc.isPermit('change_' + this.app_name);
-    //     }
-    //     return true
-    // },
-    // checkDetialsButtonPerm() {
-    //     if (this.app_name) {
-    //
-    //         return !!this.$globalFunc.isPermit('view_' + this.app_name);
-    //     }
-    //     return true
-    // }
-  },
+  computed: {},
   methods: {
     getData: function getData() {
       var _this = this;
@@ -2707,12 +2657,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.prev = 0;
                 _this.loading = true;
                 _this$options = _this.options, sortBy = _this$options.sortBy, sortDesc = _this$options.sortDesc, page = _this$options.page, itemsPerPage = _this$options.itemsPerPage;
-                params = {
+                params = _objectSpread({
                   page: page,
                   search: _this.search,
                   per_page: itemsPerPage,
                   ordering: _this.$globalFunc.getOrder(sortBy, sortDesc)
-                };
+                }, _this.otherFilter);
                 _context.next = 6;
                 return _this.$api.get(_this.url, {
                   params: params
@@ -3434,6 +3384,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3445,29 +3401,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return {
       url: 'employee/',
       headers: [{
-        text: 'Category',
-        value: 'category.name'
-      }, {
         text: 'Name',
         value: 'name'
       }, {
+        text: 'Profession',
+        value: 'category.name'
+      }, {
         text: 'Employee_ID',
         value: 'employee_id'
-      }, {
-        text: 'NID/Passport',
-        value: 'nid'
-      }, {
-        text: 'Address',
-        value: 'address'
-      }, {
-        text: 'Birth Date',
-        value: 'birth_date'
-      }, {
+      }, // {text: 'NID/Passport', value: 'nid'},
+      // {text: 'Address', value: 'address'},
+      // {text: 'Birth Date', value: 'birth_date'},
+      {
         text: 'Description',
         value: 'description'
       }, {
         text: 'Active',
-        value: 'active'
+        value: 'status'
       }, {
         text: 'Action',
         value: 'actions',
@@ -3476,6 +3426,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         sortable: false
       }],
       menu2: false,
+      active: true,
       form: {
         employee_id: null,
         nid: null,
@@ -3511,13 +3462,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }))();
   },
   methods: {
+    getData: function getData() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        _this2.$refs.dataTable.getData();
+      });
+    },
     updateModal: function updateModal(form) {
       this.editForm = JSON.parse(JSON.stringify(form));
       this.editForm.category = form.category.id;
       this.editModal = true;
     },
     addItem: function addItem() {
-      var _this2 = this;
+      var _this3 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var res;
@@ -3525,29 +3483,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                if (!_this2.$refs.form.validate()) {
+                if (!_this3.$refs.form.validate()) {
                   _context2.next = 15;
                   break;
                 }
 
                 _context2.prev = 1;
                 _context2.next = 4;
-                return _this2.$api.post(_this2.url, _this2.form);
+                return _this3.$api.post(_this3.url, _this3.form);
 
               case 4:
                 res = _context2.sent;
                 _context2.next = 7;
-                return _this2.$store.dispatch('set_alert', {
+                return _this3.$store.dispatch('set_alert', {
                   msg: 'Created Successfully',
                   type: 'success'
                 });
 
               case 7:
-                _this2.$refs.form.reset();
+                _this3.$refs.form.reset();
 
-                _this2.$refs.dataTable.getData();
+                _this3.$refs.dataTable.getData();
 
-                _this2.addModal = false;
+                _this3.addModal = false;
                 _context2.next = 15;
                 break;
 
@@ -3555,7 +3513,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 _context2.prev = 12;
                 _context2.t0 = _context2["catch"](1);
 
-                _this2.$globalFunc.errorAlert(_context2.t0.response);
+                _this3.$globalFunc.errorAlert(_context2.t0.response);
 
               case 15:
               case "end":
@@ -3566,7 +3524,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }))();
     },
     updateItem: function updateItem() {
-      var _this3 = this;
+      var _this4 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
         var res;
@@ -3574,46 +3532,87 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                console.log(_this3.editForm);
-
-                if (!_this3.$refs.editForm.validate()) {
-                  _context3.next = 16;
+                if (!_this4.$refs.editForm.validate()) {
+                  _context3.next = 15;
                   break;
                 }
 
-                _context3.prev = 2;
-                _context3.next = 5;
-                return _this3.$api.patch(_this3.url + _this3.editForm.id + '/', _this3.editForm);
+                _context3.prev = 1;
+                _context3.next = 4;
+                return _this4.$api.patch(_this4.url + _this4.editForm.id + '/', _this4.editForm);
 
-              case 5:
+              case 4:
                 res = _context3.sent;
-                _context3.next = 8;
-                return _this3.$store.dispatch('set_alert', {
+                _context3.next = 7;
+                return _this4.$store.dispatch('set_alert', {
                   msg: 'Update Successfully',
                   type: 'success'
                 });
 
-              case 8:
-                _this3.$refs.editForm.reset();
+              case 7:
+                _this4.$refs.editForm.reset();
 
-                _this3.$refs.dataTable.getData();
+                _this4.$refs.dataTable.getData();
 
-                _this3.editModal = false;
-                _context3.next = 16;
+                _this4.editModal = false;
+                _context3.next = 15;
                 break;
 
-              case 13:
-                _context3.prev = 13;
-                _context3.t0 = _context3["catch"](2);
+              case 12:
+                _context3.prev = 12;
+                _context3.t0 = _context3["catch"](1);
 
-                _this3.$globalFunc.errorAlert(_context3.t0.response);
+                _this4.$globalFunc.errorAlert(_context3.t0.response);
 
-              case 16:
+              case 15:
               case "end":
                 return _context3.stop();
             }
           }
-        }, _callee3, null, [[2, 13]]);
+        }, _callee3, null, [[1, 12]]);
+      }))();
+    },
+    toggleItem: function toggleItem(item) {
+      var _this5 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                _context4.prev = 0;
+                _context4.next = 3;
+                return _this5.$api.patch(_this5.url + item.id + '/', {
+                  active: item.active
+                });
+
+              case 3:
+                res = _context4.sent;
+                _context4.next = 6;
+                return _this5.$store.dispatch('set_alert', {
+                  msg: 'Update Successfully',
+                  type: 'success'
+                });
+
+              case 6:
+                _this5.$refs.dataTable.getData();
+
+                _context4.next = 12;
+                break;
+
+              case 9:
+                _context4.prev = 9;
+                _context4.t0 = _context4["catch"](0);
+
+                _this5.$globalFunc.errorAlert(_context4.t0.response);
+
+              case 12:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4, null, [[0, 9]]);
       }))();
     }
   }
@@ -25787,9 +25786,11 @@ var render = function () {
         [
           _c(
             "div",
-            { staticClass: "d-flex justify-end mb-3" },
+            { staticClass: "d-flex justify-end mb-3 align-center flex-wrap" },
             [
               _c("v-spacer"),
+              _vm._v(" "),
+              _vm._t("other_filter"),
               _vm._v(" "),
               _vm.searchField
                 ? _c("v-text-field", {
@@ -25799,6 +25800,7 @@ var render = function () {
                       label: "Search",
                       "single-line": "",
                       dense: "",
+                      outlined: "",
                       "hide-details": "",
                     },
                     on: { keyup: _vm.getSearch },
@@ -25812,7 +25814,7 @@ var render = function () {
                   })
                 : _vm._e(),
             ],
-            1
+            2
           ),
           _vm._v(" "),
           _c("v-data-table", {
@@ -25862,7 +25864,7 @@ var render = function () {
                                 },
                               },
                             },
-                            [_vm._v("\n               Edit\n              ")]
+                            [_vm._v("\n              Edit\n            ")]
                           ),
                           _vm._v(" "),
                           _c(
@@ -25876,11 +25878,7 @@ var render = function () {
                                 },
                               },
                             },
-                            [
-                              _vm._v(
-                                "\n                    Delete\n                "
-                              ),
-                            ]
+                            [_vm._v("\n              Delete\n            ")]
                           ),
                         ],
                         1
@@ -25919,7 +25917,7 @@ var render = function () {
                     },
                     [
                       _vm._v(
-                        "\n                    Are you sure you want to delete this item?\n                "
+                        "\n            Are you sure you want to delete this item?\n          "
                       ),
                     ]
                   ),
@@ -26359,11 +26357,58 @@ var render = function () {
               url: _vm.url,
               tableHeadline: "Manage Employee",
               headers: _vm.headers,
-              addBtnLink: "addCountry",
-              editBtnLink: "editCountry",
-              app_name: "country",
+              otherFilter: { active: _vm.active },
             },
             on: { updateModal: _vm.updateModal },
+            scopedSlots: _vm._u([
+              {
+                key: "other_filter",
+                fn: function () {
+                  return [
+                    _c("v-switch", {
+                      staticClass: "mx-4",
+                      attrs: { dense: "", inset: "", label: "Is Active" },
+                      on: {
+                        change: function ($event) {
+                          return _vm.getData()
+                        },
+                      },
+                      model: {
+                        value: _vm.active,
+                        callback: function ($$v) {
+                          _vm.active = $$v
+                        },
+                        expression: "active",
+                      },
+                    }),
+                  ]
+                },
+                proxy: true,
+              },
+              {
+                key: "item.status",
+                fn: function (ref) {
+                  var item = ref.item
+                  return [
+                    _c("v-switch", {
+                      attrs: { dense: "", inset: "" },
+                      on: {
+                        change: function ($event) {
+                          return _vm.toggleItem(item)
+                        },
+                      },
+                      model: {
+                        value: item.active,
+                        callback: function ($$v) {
+                          _vm.$set(item, "active", $$v)
+                        },
+                        expression: "item.active",
+                      },
+                    }),
+                  ]
+                },
+              },
+            ]),
           }),
         ],
         1
@@ -26709,28 +26754,6 @@ var render = function () {
                                         _vm.$set(_vm.form, "description", $$v)
                                       },
                                       expression: "form.description",
-                                    },
-                                  }),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-col",
-                                { attrs: { cols: "12" } },
-                                [
-                                  _c("v-checkbox", {
-                                    attrs: {
-                                      label: "Active",
-                                      color: "secondary",
-                                      value: "True",
-                                    },
-                                    model: {
-                                      value: _vm.form.active,
-                                      callback: function ($$v) {
-                                        _vm.$set(_vm.form, "active", $$v)
-                                      },
-                                      expression: "form.active",
                                     },
                                   }),
                                 ],
@@ -29867,7 +29890,7 @@ var render = function () {
                               staticClass: "my-2",
                               attrs: {
                                 large: "",
-                                solo: "",
+                                outline: "",
                                 dense: "",
                                 rules: [
                                   function (v) {
@@ -30004,8 +30027,6 @@ var render = function () {
                             _c("v-text-field", {
                               staticClass: "my-2",
                               attrs: {
-                                label: "Item",
-                                large: "",
                                 outlined: "",
                                 dense: "",
                                 type: "name",

@@ -154,7 +154,7 @@
           >
             <template v-slot:item.name="{ item,index }">
               <v-text-field large
-                            solo
+                            outline
                             dense
                             class="my-2"
                             :rules="[v=> !!v || 'Item is required']"
@@ -211,8 +211,8 @@
               </v-text-field>
             </template>
             <template v-slot:item.unit_price="{ item,index }">
-              <v-text-field label="Item"
-                            large
+              <v-text-field
+
                             outlined
                             dense
                             class="my-2"
