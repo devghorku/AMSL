@@ -1,6 +1,10 @@
 <template>
   <v-container>
-
+    <div class="text-right my-4">
+      <v-btn small class="text-none" color="primary" to="/invoice">
+        Create Invoice
+      </v-btn>
+    </div>
     <v-card class="my-2 pa-3">
       <data-table
           :url="url"
@@ -55,7 +59,7 @@ export default {
   components: {DataTable},
   data() {
     return {
-      url: 'invoice-list/',
+      url: 'invoice/',
       headers: [
         {text: 'Invoice ID', value: 'invoice_id'},
         {text: 'Date', value: 'invoice_date'},
@@ -77,6 +81,7 @@ export default {
 
     }
   },
+
 
 }
 </script>
