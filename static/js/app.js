@@ -5529,6 +5529,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'create',
   data: function data() {
@@ -29174,7 +29195,7 @@ var render = function () {
                           type: "text",
                           dense: "",
                           "hide-details": "",
-                          rows: "3",
+                          rows: "2",
                           rules: [
                             function (v) {
                               return !!v || "Client Address is required"
@@ -29187,6 +29208,36 @@ var render = function () {
                             _vm.$set(_vm.form, "client_address", $$v)
                           },
                           expression: "form.client_address",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    { attrs: { cols: "12", md: "8" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: {
+                          label: "Client Phone",
+                          large: "",
+                          outlined: "",
+                          type: "text",
+                          dense: "",
+                          "hide-details": "",
+                          rules: [
+                            function (v) {
+                              return !!v || "Client Address is required"
+                            },
+                          ],
+                        },
+                        model: {
+                          value: _vm.form.client_phone,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "client_phone", $$v)
+                          },
+                          expression: "form.client_phone",
                         },
                       }),
                     ],
@@ -29544,6 +29595,7 @@ var render = function () {
           _vm._v(" "),
           _c(
             "v-row",
+            { staticClass: "mt-10 px-3 " },
             [
               _c(
                 "v-col",
@@ -29794,6 +29846,28 @@ var render = function () {
                         _vm.$set(_vm.form, "vat", $$v)
                       },
                       expression: "form.vat",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("v-text-field", {
+                    attrs: {
+                      label: "Discount",
+                      large: "",
+                      outlined: "",
+                      dense: "",
+                      type: "text",
+                      rules: [
+                        function (v) {
+                          return !!v || "field is required"
+                        },
+                      ],
+                    },
+                    model: {
+                      value: _vm.form.discount,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "discount", $$v)
+                      },
+                      expression: "form.discount",
                     },
                   }),
                   _vm._v(" "),
