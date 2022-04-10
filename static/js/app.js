@@ -5523,6 +5523,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'create',
   data: function data() {
@@ -29124,11 +29130,11 @@ var render = function () {
             [
               _c(
                 "v-col",
-                { attrs: { cols: "12", md: "6" } },
+                { attrs: { cols: "12", md: "5" } },
                 [
                   _c(
                     "v-col",
-                    { attrs: { cols: "12", md: "6" } },
+                    { attrs: { cols: "12", md: "8" } },
                     [
                       _c("v-text-field", {
                         attrs: {
@@ -29158,9 +29164,9 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "v-col",
-                    { attrs: { cols: "12", md: "6" } },
+                    { attrs: { cols: "12", md: "8" } },
                     [
-                      _c("v-text-field", {
+                      _c("v-textarea", {
                         attrs: {
                           label: "Client Address",
                           large: "",
@@ -29168,6 +29174,7 @@ var render = function () {
                           type: "text",
                           dense: "",
                           "hide-details": "",
+                          rows: "3",
                           rules: [
                             function (v) {
                               return !!v || "Client Address is required"
@@ -29191,11 +29198,11 @@ var render = function () {
               _vm._v(" "),
               _c(
                 "v-col",
-                { attrs: { cols: "12", md: "6" } },
+                { staticClass: "justify-end", attrs: { cols: "12", md: "7" } },
                 [
                   _c(
                     "v-col",
-                    { attrs: { cols: "12", md: "6" } },
+                    { attrs: { cols: "12" } },
                     [
                       _c("v-text-field", {
                         attrs: {
@@ -29225,7 +29232,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "v-col",
-                    { attrs: { cols: "12", md: "6" } },
+                    { attrs: { cols: "12" } },
                     [
                       _c(
                         "v-menu",
@@ -29314,181 +29321,214 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "v-col",
-                    { attrs: { cols: "12", md: "6" } },
+                    { attrs: { cols: "12" } },
                     [
                       _c(
-                        "v-menu",
-                        {
-                          attrs: {
-                            "close-on-content-click": false,
-                            "nudge-right": 40,
-                            transition: "scale-transition",
-                            "offset-y": "",
-                            "min-width": "auto",
-                          },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "activator",
-                              fn: function (ref) {
-                                var on = ref.on
-                                var attrs = ref.attrs
-                                return [
-                                  _c(
-                                    "v-text-field",
-                                    _vm._g(
-                                      _vm._b(
-                                        {
-                                          attrs: {
-                                            label: "From Date",
-                                            outlined: "",
-                                            readonly: "",
-                                            dense: "",
-                                            "hide-details": "",
-                                            rules: [
-                                              function (v) {
-                                                return (
-                                                  !!v || "field is required"
-                                                )
-                                              },
-                                            ],
-                                          },
-                                          model: {
-                                            value: _vm.form.from_date,
-                                            callback: function ($$v) {
-                                              _vm.$set(
-                                                _vm.form,
-                                                "from_date",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "form.from_date",
-                                          },
-                                        },
-                                        "v-text-field",
-                                        attrs,
-                                        false
-                                      ),
-                                      on
-                                    )
-                                  ),
-                                ]
-                              },
-                            },
-                          ]),
-                          model: {
-                            value: _vm.menu2,
-                            callback: function ($$v) {
-                              _vm.menu2 = $$v
-                            },
-                            expression: "menu2",
-                          },
-                        },
+                        "v-row",
+                        { staticClass: "d-flex flex-row pa-3" },
                         [
+                          _c(
+                            "div",
+                            { staticClass: "pr-5" },
+                            [
+                              _c(
+                                "v-menu",
+                                {
+                                  attrs: {
+                                    "close-on-content-click": false,
+                                    "nudge-right": 40,
+                                    transition: "scale-transition",
+                                    "offset-y": "",
+                                    "min-width": "auto",
+                                  },
+                                  scopedSlots: _vm._u([
+                                    {
+                                      key: "activator",
+                                      fn: function (ref) {
+                                        var on = ref.on
+                                        var attrs = ref.attrs
+                                        return [
+                                          _c(
+                                            "v-text-field",
+                                            _vm._g(
+                                              _vm._b(
+                                                {
+                                                  attrs: {
+                                                    label: "From Date",
+                                                    outlined: "",
+                                                    readonly: "",
+                                                    dense: "",
+                                                    "hide-details": "",
+                                                    rules: [
+                                                      function (v) {
+                                                        return (
+                                                          !!v ||
+                                                          "field is required"
+                                                        )
+                                                      },
+                                                    ],
+                                                  },
+                                                  model: {
+                                                    value: _vm.form.from_date,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.form,
+                                                        "from_date",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "form.from_date",
+                                                  },
+                                                },
+                                                "v-text-field",
+                                                attrs,
+                                                false
+                                              ),
+                                              on
+                                            )
+                                          ),
+                                        ]
+                                      },
+                                    },
+                                  ]),
+                                  model: {
+                                    value: _vm.menu2,
+                                    callback: function ($$v) {
+                                      _vm.menu2 = $$v
+                                    },
+                                    expression: "menu2",
+                                  },
+                                },
+                                [
+                                  _vm._v(" "),
+                                  _c("v-date-picker", {
+                                    on: {
+                                      input: function ($event) {
+                                        _vm.menu2 = false
+                                      },
+                                    },
+                                    model: {
+                                      value: _vm.form.from_date,
+                                      callback: function ($$v) {
+                                        _vm.$set(_vm.form, "from_date", $$v)
+                                      },
+                                      expression: "form.from_date",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
                           _vm._v(" "),
-                          _c("v-date-picker", {
-                            on: {
-                              input: function ($event) {
-                                _vm.menu2 = false
-                              },
-                            },
-                            model: {
-                              value: _vm.form.from_date,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "from_date", $$v)
-                              },
-                              expression: "form.from_date",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "12", md: "6" } },
-                    [
-                      _c(
-                        "v-menu",
-                        {
-                          attrs: {
-                            "close-on-content-click": false,
-                            "nudge-right": 40,
-                            transition: "scale-transition",
-                            "offset-y": "",
-                            "min-width": "auto",
-                          },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "activator",
-                              fn: function (ref) {
-                                var on = ref.on
-                                var attrs = ref.attrs
-                                return [
-                                  _c(
-                                    "v-text-field",
-                                    _vm._g(
-                                      _vm._b(
-                                        {
-                                          attrs: {
-                                            label: "To Date",
-                                            outlined: "",
-                                            readonly: "",
-                                            dense: "",
-                                            "hide-details": "",
-                                            rules: [
-                                              function (v) {
-                                                return (
-                                                  !!v || "field is required"
-                                                )
-                                              },
-                                            ],
-                                          },
-                                          model: {
-                                            value: _vm.form.to_date,
-                                            callback: function ($$v) {
-                                              _vm.$set(_vm.form, "to_date", $$v)
-                                            },
-                                            expression: "form.to_date",
-                                          },
-                                        },
-                                        "v-text-field",
-                                        attrs,
-                                        false
-                                      ),
-                                      on
-                                    )
-                                  ),
-                                ]
-                              },
-                            },
-                          ]),
-                          model: {
-                            value: _vm.menu3,
-                            callback: function ($$v) {
-                              _vm.menu3 = $$v
-                            },
-                            expression: "menu3",
-                          },
-                        },
-                        [
+                          _c(
+                            "div",
+                            { staticClass: "pr-5" },
+                            [
+                              _c(
+                                "v-menu",
+                                {
+                                  attrs: {
+                                    "close-on-content-click": false,
+                                    "nudge-right": 40,
+                                    transition: "scale-transition",
+                                    "offset-y": "",
+                                    "min-width": "auto",
+                                  },
+                                  scopedSlots: _vm._u([
+                                    {
+                                      key: "activator",
+                                      fn: function (ref) {
+                                        var on = ref.on
+                                        var attrs = ref.attrs
+                                        return [
+                                          _c(
+                                            "v-text-field",
+                                            _vm._g(
+                                              _vm._b(
+                                                {
+                                                  attrs: {
+                                                    label: "To Date",
+                                                    outlined: "",
+                                                    readonly: "",
+                                                    dense: "",
+                                                    "hide-details": "",
+                                                    rules: [
+                                                      function (v) {
+                                                        return (
+                                                          !!v ||
+                                                          "field is required"
+                                                        )
+                                                      },
+                                                    ],
+                                                  },
+                                                  model: {
+                                                    value: _vm.form.to_date,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.form,
+                                                        "to_date",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression: "form.to_date",
+                                                  },
+                                                },
+                                                "v-text-field",
+                                                attrs,
+                                                false
+                                              ),
+                                              on
+                                            )
+                                          ),
+                                        ]
+                                      },
+                                    },
+                                  ]),
+                                  model: {
+                                    value: _vm.menu3,
+                                    callback: function ($$v) {
+                                      _vm.menu3 = $$v
+                                    },
+                                    expression: "menu3",
+                                  },
+                                },
+                                [
+                                  _vm._v(" "),
+                                  _c("v-date-picker", {
+                                    on: {
+                                      input: function ($event) {
+                                        _vm.menu3 = false
+                                      },
+                                    },
+                                    model: {
+                                      value: _vm.form.to_date,
+                                      callback: function ($$v) {
+                                        _vm.$set(_vm.form, "to_date", $$v)
+                                      },
+                                      expression: "form.to_date",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
                           _vm._v(" "),
-                          _c("v-date-picker", {
-                            on: {
-                              input: function ($event) {
-                                _vm.menu3 = false
-                              },
-                            },
-                            model: {
-                              value: _vm.form.to_date,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "to_date", $$v)
-                              },
-                              expression: "form.to_date",
-                            },
-                          }),
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            [
+                              _c("v-btn", { staticClass: "info" }, [
+                                _vm._v("Last Month"),
+                              ]),
+                            ],
+                            1
+                          ),
                         ],
                         1
                       ),

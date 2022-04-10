@@ -2,139 +2,145 @@
   <v-container>
     <v-form @submit.prevent="addInvoice()" ref="addForm">
       <v-row class="mt-6">
-        <v-col cols="12" md="6">
-          <v-col cols="12" md="6">
-          <v-text-field label="Client Name"
-                        large
-                        outlined
-                        dense
-                        type="name"
-                        hide-details
-                        :rules="[v=> !!v || 'Client Name is required']"
-                        v-model="form.client_name"
-          >
-          </v-text-field>
-        </v-col>
-        <v-col cols="12" md="6">
-          <v-text-field label="Client Address"
+        <v-col cols="12" md="5">
+          <v-col cols="12" md="8">
+            <v-text-field label="Client Name"
+                          large
+                          outlined
+                          dense
+                          type="name"
+                          hide-details
+                          :rules="[v=> !!v || 'Client Name is required']"
+                          v-model="form.client_name"
+            >
+            </v-text-field>
+          </v-col>
+          <v-col cols="12" md="8">
+            <v-textarea label="Client Address"
                         large
                         outlined
                         type="text"
                         dense
                         hide-details
+                        rows="3"
                         :rules="[v=> !!v || 'Client Address is required']"
                         v-model="form.client_address"
+            >
+            </v-textarea>
+          </v-col>
+        </v-col>
+        <v-col cols="12" md="7" class="justify-end">
+          <v-col cols="12">
+            <v-text-field label="Invoice ID"
+                          large
+                          outlined
+                          type="text"
+                          dense
+                          hide-details
+                          :rules="[v=> !!v || 'Invoice ID is required']"
+                          v-model="form.invoice_id"
+            >
+            </v-text-field>
+          </v-col>
+          <v-col
+              cols="12"
           >
-          </v-text-field>
-        </v-col>
-        </v-col>
-        <v-col cols="12" md="6">
-          <v-col cols="12" md="6">
-          <v-text-field label="Invoice ID"
-                        large
+            <v-menu
+                v-model="menu1"
+                :close-on-content-click="false"
+                :nudge-right="40"
+                transition="scale-transition"
+                offset-y
+                min-width="auto"
+            >
+              <template v-slot:activator="{ on, attrs }">
+                <v-text-field
+                    label="Date"
+                    outlined
+                    dense
+                    hide-details
+                    v-bind="attrs"
+                    v-on="on"
+                    :rules="[v=> !!v || 'field is required']"
+                    v-model="form.date"
+                ></v-text-field>
+              </template>
+              <v-date-picker
+                  v-model="form.date"
+                  @input="menu1 = false"
+              ></v-date-picker>
+            </v-menu>
+
+          </v-col>
+          <v-col cols="12">
+            <v-row class="d-flex flex-row pa-3">
+              <div class="pr-5"
+              >
+                <v-menu
+                    v-model="menu2"
+                    :close-on-content-click="false"
+                    :nudge-right="40"
+                    transition="scale-transition"
+                    offset-y
+                    min-width="auto"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-text-field
+                        label="From Date"
                         outlined
-                        type="text"
+                        readonly
+                        v-bind="attrs"
+                        v-on="on"
                         dense
                         hide-details
-                        :rules="[v=> !!v || 'Invoice ID is required']"
-                        v-model="form.invoice_id"
-          >
-          </v-text-field>
-        </v-col>
-        <v-col
-            cols="12"
-            md="6"
-        >
-          <v-menu
-              v-model="menu1"
-              :close-on-content-click="false"
-              :nudge-right="40"
-              transition="scale-transition"
-              offset-y
-              min-width="auto"
-          >
-            <template v-slot:activator="{ on, attrs }">
-              <v-text-field
-                  label="Date"
-                  outlined
-                  dense
-                  hide-details
-                  v-bind="attrs"
-                  v-on="on"
-                  :rules="[v=> !!v || 'field is required']"
-                  v-model="form.date"
-              ></v-text-field>
-            </template>
-            <v-date-picker
-                v-model="form.date"
-                @input="menu1 = false"
-            ></v-date-picker>
-          </v-menu>
+                        :rules="[v=> !!v || 'field is required']"
+                        v-model="form.from_date"
+                    ></v-text-field>
+                  </template>
+                  <v-date-picker
+                      v-model="form.from_date"
+                      @input="menu2 = false"
+                  ></v-date-picker>
+                </v-menu>
 
-        </v-col>
-        <v-col
-            cols="12" md="6"
-        >
-          <v-menu
-              v-model="menu2"
-              :close-on-content-click="false"
-              :nudge-right="40"
-              transition="scale-transition"
-              offset-y
-              min-width="auto"
-          >
-            <template v-slot:activator="{ on, attrs }">
-              <v-text-field
-                  label="From Date"
-                  outlined
-                  readonly
-                  v-bind="attrs"
-                  v-on="on"
-                  dense
-                  hide-details
-                  :rules="[v=> !!v || 'field is required']"
-                  v-model="form.from_date"
-              ></v-text-field>
-            </template>
-            <v-date-picker
-                v-model="form.from_date"
-                @input="menu2 = false"
-            ></v-date-picker>
-          </v-menu>
+              </div>
+              <div class="pr-5"
+              >
+                <v-menu
+                    v-model="menu3"
+                    :close-on-content-click="false"
+                    :nudge-right="40"
+                    transition="scale-transition"
+                    offset-y
+                    min-width="auto"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-text-field
+                        label="To Date"
+                        outlined
+                        readonly
+                        v-bind="attrs"
+                        v-on="on"
+                        dense
+                        hide-details
+                        :rules="[v=> !!v || 'field is required']"
+                        v-model="form.to_date"
+                    ></v-text-field>
+                  </template>
+                  <v-date-picker
+                      v-model="form.to_date"
+                      @input="menu3 = false"
+                  ></v-date-picker>
+                </v-menu>
 
-        </v-col>
-        <v-col
-            cols="12"
-            md="6"
-        >
-          <v-menu
-              v-model="menu3"
-              :close-on-content-click="false"
-              :nudge-right="40"
-              transition="scale-transition"
-              offset-y
-              min-width="auto"
-          >
-            <template v-slot:activator="{ on, attrs }">
-              <v-text-field
-                  label="To Date"
-                  outlined
-                  readonly
-                  v-bind="attrs"
-                  v-on="on"
-                  dense
-                  hide-details
-                  :rules="[v=> !!v || 'field is required']"
-                  v-model="form.to_date"
-              ></v-text-field>
-            </template>
-            <v-date-picker
-                v-model="form.to_date"
-                @input="menu3 = false"
-            ></v-date-picker>
-          </v-menu>
+              </div>
+              <v-spacer></v-spacer>
+              <div>
+                <v-btn class="info">Last Month</v-btn>
+              </div>
+            </v-row>
+          </v-col>
 
-        </v-col>
         </v-col>
       </v-row>
       <v-row>
