@@ -23,11 +23,23 @@
                         type="text"
                         dense
                         hide-details
-                        rows="3"
+                        rows="2"
                         :rules="[v=> !!v || 'Client Address is required']"
                         v-model="form.client_address"
             >
             </v-textarea>
+          </v-col>
+          <v-col cols="12" md="8">
+            <v-text-field label="Client Phone"
+                        large
+                        outlined
+                        type="text"
+                        dense
+                        hide-details
+                        :rules="[v=> !!v || 'Client Address is required']"
+                        v-model="form.client_phone"
+            >
+            </v-text-field>
           </v-col>
         </v-col>
         <v-col cols="12" md="7" class="justify-end">
@@ -144,7 +156,7 @@
 
         </v-col>
       </v-row>
-      <v-row>
+      <v-row class="mt-10 px-3 ">
         <v-col cols="12" md="2">
           <v-text-field label="Item"
                         large
@@ -240,6 +252,15 @@
                         type="text"
                         :rules="[v=> !!v || 'field is required']"
                         v-model="form.vat"
+          >
+          </v-text-field>
+          <v-text-field label="Discount"
+                        large
+                        outlined
+                        dense
+                        type="text"
+                        :rules="[v=> !!v || 'field is required']"
+                        v-model="form.discount"
           >
           </v-text-field>
           <v-text-field label="Due"
