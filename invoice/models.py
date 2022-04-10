@@ -10,6 +10,7 @@ class Invoice(models.Model):
     client_name = models.CharField(max_length=250)
     client_address = models.TextField(null=True, blank=True)
     vat = models.FloatField(default=0)
+    discount = models.FloatField(default=0)
     due = models.IntegerField(default=0)
     comment = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

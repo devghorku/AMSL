@@ -1,53 +1,37 @@
 <template>
-  <v-container>
+  <v-container class="invoice mb-8">
     <v-form @submit.prevent="addInvoice"
-            ref="addForm">
+            ref="form">
       <v-row class="mt-6">
-        <v-col cols="12" md="5">
-          <v-col cols="12" md="8">
-            <v-text-field label="Client Name"
-                          large
-                          outlined
-                          dense
-                          type="name"
-                          hide-details
-                          :rules="[v=> !!v || 'Client Name is required']"
-                          v-model="form.client_name"
-            >
-            </v-text-field>
-          </v-col>
-          <v-col cols="12" md="8">
-            <v-textarea label="Client Address"
-                        large
+        <v-col cols="12" sm="6" md="4">
+          <v-text-field label="Client Name"
                         outlined
-                        type="text"
+                        dense
+                        type="name"
+                        :rules="[v=> !!v || 'Client Name is required']"
+                        v-model="form.client_name"
+          >
+          </v-text-field>
+          <v-textarea label="Client Address"
+                      outlined
+                      dense
+                      rows="2"
+                      v-model="form.client_address"
+          >
+          </v-textarea>
+          <v-text-field label="Client Phone"
+                        outlined
+                        dense
+                        v-model="form.client_phone"
+          >
+          </v-text-field>
+        </v-col>
+        <v-col cols="12" sm="6" md="8" class="d-flex flex-column align-end">
+          <v-text-field label="Invoice ID"
+                        class="pt-2"
+                        outlined
                         dense
                         hide-details
-                        rows="2"
-                        :rules="[v=> !!v || 'Client Address is required']"
-                        v-model="form.client_address"
-            >
-            </v-textarea>
-          </v-col>
-          <v-col cols="12" md="8">
-            <v-text-field label="Client Phone"
-                          large
-                          outlined
-                          type="text"
-                          dense
-                          hide-details
-                          :rules="[v=> !!v || 'Client Address is required']"
-                          v-model="form.client_phone"
-            >
-            </v-text-field>
-          </v-col>
-        </v-col>
-        <v-col cols="12" md="7" class="d-flex flex-column align-end">
-          <v-text-field label="Invoice ID"
-                        large
-                        outlined
-                        type="text"
-                        dense
                         style="max-width: 200px"
                         :rules="[v=> !!v || 'Invoice ID is required']"
                         v-model="form.invoice_id"
@@ -62,23 +46,25 @@
               min-width="auto"
           >
             <template v-slot:activator="{ on, attrs }">
-              <v-text-field
-                  label="Date"
-                  outlined
-                  dense
-                  v-bind="attrs"
-                  v-on="on"
-                  :rules="[v=> !!v || 'field is required']"
-                  v-model="form.date"
+              <v-text-field class="pt-2"
+                            label="Date"
+                            outlined
+                            dense
+                            v-bind="attrs"
+                            v-on="on"
+                            hide-details
+                            style="max-width: 200px"
+                            :rules="[v=> !!v || 'field is required']"
+                            v-model="form.invoice_date"
               ></v-text-field>
             </template>
             <v-date-picker
-                v-model="form.date"
+                v-model="form.invoice_date"
                 @input="menu1 = false"
             ></v-date-picker>
           </v-menu>
 
-          <v-row class="d-flex flex-row pa-3">
+          <v-row class="d-flex flex-row pa-3 justify-end">
             <div class="pr-5"
             >
               <v-menu
@@ -90,16 +76,16 @@
                   min-width="auto"
               >
                 <template v-slot:activator="{ on, attrs }">
-                  <v-text-field
-                      label="From Date"
-                      outlined
-                      readonly
-                      v-bind="attrs"
-                      v-on="on"
-                      dense
-                      hide-details
-                      :rules="[v=> !!v || 'field is required']"
-                      v-model="form.from_date"
+                  <v-text-field class="pt-2"
+                                label="From Date"
+                                outlined
+                                readonly
+                                v-bind="attrs"
+                                v-on="on"
+                                dense
+                                hide-details
+                                style="max-width: 150px"
+                                v-model="form.from_date"
                   ></v-text-field>
                 </template>
                 <v-date-picker
@@ -109,7 +95,7 @@
               </v-menu>
 
             </div>
-            <div class="pr-5"
+            <div class="pr-lg-5 pr-0"
             >
               <v-menu
                   v-model="menu3"
@@ -120,16 +106,16 @@
                   min-width="auto"
               >
                 <template v-slot:activator="{ on, attrs }">
-                  <v-text-field
-                      label="To Date"
-                      outlined
-                      readonly
-                      v-bind="attrs"
-                      v-on="on"
-                      dense
-                      hide-details
-                      :rules="[v=> !!v || 'field is required']"
-                      v-model="form.to_date"
+                  <v-text-field class="pt-2"
+                                label="To Date"
+                                outlined
+                                readonly
+                                v-bind="attrs"
+                                v-on="on"
+                                dense
+                                hide-details
+                                style="max-width: 150px"
+                                v-model="form.to_date"
                   ></v-text-field>
                 </template>
                 <v-date-picker
@@ -139,9 +125,8 @@
               </v-menu>
 
             </div>
-            <v-spacer></v-spacer>
-            <div>
-              <v-btn class="info">Last Month</v-btn>
+            <div style="max-width: 150px" class="pt-2">
+              <v-btn class="info text-none">Last Month</v-btn>
             </div>
           </v-row>
         </v-col>
@@ -151,10 +136,10 @@
           <v-data-table
               :headers="headers"
               :items="form.invoices"
+              hide-default-footer
           >
             <template v-slot:item.name="{ item,index }">
-              <v-text-field large
-                            solo
+              <v-text-field outlined
                             dense
                             class="my-2"
                             :rules="[v=> !!v || 'Item is required']"
@@ -163,78 +148,54 @@
               </v-text-field>
             </template>
             <template v-slot:item.desc="{ item,index }">
-              <v-text-field label="Item"
-                            large
-                            outlined
+              <v-text-field outlined
                             dense
                             class="my-2"
-                            type="name"
-                            :rules="[v=> !!v || 'Item is required']"
-                            v-model="form.invoices[index].product_name"
+                            v-model="form.invoices[index].description"
               >
               </v-text-field>
             </template>
             <template v-slot:item.quantity="{ item,index }">
-              <v-text-field label="Item"
-                            large
-                            outlined
+              <v-text-field outlined
                             dense
                             class="my-2"
-                            type="name"
+                            type="number"
                             :rules="[v=> !!v || 'Item is required']"
-                            v-model="form.invoices[index].product_name"
+                            v-model="form.invoices[index].quantity"
               >
               </v-text-field>
             </template>
             <template v-slot:item.base="{ item,index }">
-              <v-text-field label="Item"
-                            large
-                            outlined
+              <v-text-field outlined
                             dense
                             class="my-2"
                             type="name"
-                            :rules="[v=> !!v || 'Item is required']"
-                            v-model="form.invoices[index].product_name"
-              >
-              </v-text-field>
-            </template>
-            <template v-slot:item.base="{ item,index }">
-              <v-text-field label="Item"
-                            large
-                            outlined
-                            dense
-                            class="my-2"
-                            type="name"
-                            :rules="[v=> !!v || 'Item is required']"
-                            v-model="form.invoices[index].product_name"
+                            v-model="form.invoices[index].base"
               >
               </v-text-field>
             </template>
             <template v-slot:item.unit_price="{ item,index }">
-              <v-text-field label="Item"
-                            large
-                            outlined
+              <v-text-field outlined
                             dense
                             class="my-2"
-                            type="name"
+                            type="number"
                             :rules="[v=> !!v || 'Item is required']"
-                            v-model="form.invoices[index].product_name"
+                            v-model="form.invoices[index].unit_price"
               >
               </v-text-field>
             </template>
             <template v-slot:item.actions="{ item,index }">
               <v-btn x-small color="error" class="text-none"
                      v-if="form.invoices.length>1"
-                     @click="removeInvoices(index)">Delete</v-btn>
+                     @click="removeInvoices(index)">Delete
+              </v-btn>
             </template>
           </v-data-table>
 
         </v-col>
       </v-row>
-      <v-row class="justify-center">
-        <v-col cols="12" md="9">
-          <v-btn color="success" block @click="addInvoiceItem"> Add Item</v-btn>
-        </v-col>
+      <v-row class="justify-end">
+        <v-btn color="success" @click="addInvoiceItem" small class="px-5 ma-4"> Add Item</v-btn>
       </v-row>
       <v-row>
         <v-col cols="12" md="6">
@@ -249,42 +210,52 @@
           >
           </v-textarea>
         </v-col>
-        <v-col cols="12" md="6" class="d-flex flex-column">
+        <v-col cols="12" md="6" class="d-flex flex-column align-end">
           <v-text-field label="Vat"
-                        large
                         outlined
                         dense
                         type="number"
-                        :rules="[v=> !!v || 'field is required']"
+                        style="max-width: 200px"
                         v-model="form.vat"
           >
           </v-text-field>
           <v-text-field label="Discount"
-                        large
                         outlined
                         dense
                         type="number"
+                        style="max-width: 200px"
                         v-model="form.discount"
           >
           </v-text-field>
           <v-text-field label="Due"
-                        large
                         outlined
                         dense
-                        type="text"
-                        :rules="[v=> !!v || 'field is required']"
+                        type="number"
+                        style="max-width: 200px"
                         v-model="form.due"
           >
           </v-text-field>
           <v-text-field label="Total"
-                        large
                         outlined
                         dense
                         readonly
+                        style="max-width: 200px"
           >
           </v-text-field>
         </v-col>
       </v-row>
+      <div class="justify-center text-center">
+        <v-btn
+                  color="primary"
+                  class="text-none font-weight-bold"
+                  type="submit"
+                  small
+                  @click="submit"
+              >
+                Submit
+              </v-btn>
+      </div>
+
     </v-form>
 
   </v-container>
@@ -304,13 +275,14 @@ export default {
           align: 'start',
           sortable: false,
           value: 'name',
+          width: '200px',
         },
-        {text: 'Description', value: 'desc', sortable: false},
-        {text: 'Quantity', value: 'quantity', sortable: false},
-        {text: 'Base', value: 'base', sortable: false},
-        {text: 'Unit Price', value: 'unit_price', sortable: false},
-        {text: 'Total', value: 'total', sortable: false},
-        {text: '', value: 'actions', sortable: false},
+        {text: 'Description', value: 'desc', sortable: false, width: '250px',},
+        {text: 'Quantity', value: 'quantity', sortable: false, width: '150px',},
+        {text: 'Base', value: 'base', sortable: false, width: '150px',},
+        {text: 'Unit Price', value: 'unit_price', sortable: false, width: '150px',},
+        {text: 'Total', value: 'total', sortable: false, width: '150px',},
+        {text: '', value: 'actions', sortable: false, width: '80px',},
       ],
       form: {
         invoice_id: '',
@@ -341,54 +313,46 @@ export default {
     console.log(res2)
   },
   methods: {
-    addInvoiceItem(){
+    addInvoiceItem() {
       this.form.invoices.push({
-            product_name: '',
-            description: '',
-            quantity: 0,
-            base: '',
-            unit_price: 1
-          })
-    },
-    removeInvoices(idx){
-      if(this.form.invoices.length>1){
-        this.form.invoices.splice(idx,1)
-      }
+        product_name: '',
+        description: '',
+        quantity: 0,
+        base: '',
+        unit_price: 1
+      })
     },
     async submit() {
-      const form = {
-        invoice_id: '#feb11321',
-        invoice_date: new Date().toISOString().substring(0, 10),
-        from_date: null,
-        to_date: null,
-        client_name: 'hasib',
-        client_address: 'asdasdasdsadsd',
-        client_phone: '',
-        vat: 0,
-        due: 0,
-        discount: 0,
-        comment: 'sdadsad',
-        invoices: [
-          {
-            product_name: 'a',
-            description: 'asdasdsad',
-            quantity: 1,
-            base: 'hr',
-            unit_price: 10
-          },
-          {
-            product_name: 'b',
-            description: 'asdasdsad sadsa',
-            quantity: 2,
-            base: 'hr',
-            unit_price: 10
-          }
-        ]
-      };
-      const res = await this.$api.post(this.url, form);
-      console.log(res)
+      if (this.$refs.form.validate()) {
+        try {
+          const res = await this.$api.post(this.url, this.form);
+          await this.$store.dispatch('set_alert', {msg: 'Created Successfully', type: 'success'});
+          this.$refs.form.reset();
+        } catch (err) {
+          this.$globalFunc.errorAlert(err.response)
+        }
+      }
 
-    }
+    },
+    removeInvoices(idx) {
+      if (this.form.invoices.length > 1) {
+        this.form.invoices.splice(idx, 1)
+      }
+    },
   }
 }
 </script>
+<style lang="scss">
+.invoice {
+  .v-form {
+    .v-input__slot {
+      .v-text-field__slot {
+        .v-label {
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+}
+
+</style>

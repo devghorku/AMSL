@@ -2474,10 +2474,10 @@ module.exports = {
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
   \*****************************************/
-/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, browser, bugs, bundleDependencies, bundlesize, dependencies, deprecated, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
+/*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, bundlesize, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"axios@^0.21.1\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"axios@^0.21.1\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"^0.21.1\",\"saveSpec\":null,\"fetchSpec\":\"^0.21.1\"},\"_requiredBy\":[\"/\",\"/localtunnel\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_shasum\":\"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575\",\"_spec\":\"axios@^0.21.1\",\"_where\":\"D:\\\\project\\\\python\\\\AMSL\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundleDependencies\":false,\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"deprecated\":false,\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
+module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"D:\\\\devghor\\\\AMSL\"]],\"_from\":\"axios@0.21.4\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.4\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.4\",\"saveSpec\":null,\"fetchSpec\":\"0.21.4\"},\"_requiredBy\":[\"/\",\"/localtunnel\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_spec\":\"0.21.4\",\"_where\":\"D:\\\\devghor\\\\AMSL\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
 
 /***/ }),
 
@@ -5527,35 +5527,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'create',
   data: function data() {
@@ -5568,31 +5539,38 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         text: 'name',
         align: 'start',
         sortable: false,
-        value: 'name'
+        value: 'name',
+        width: '200px'
       }, {
         text: 'Description',
         value: 'desc',
-        sortable: false
+        sortable: false,
+        width: '250px'
       }, {
         text: 'Quantity',
         value: 'quantity',
-        sortable: false
+        sortable: false,
+        width: '150px'
       }, {
         text: 'Base',
         value: 'base',
-        sortable: false
+        sortable: false,
+        width: '150px'
       }, {
         text: 'Unit Price',
         value: 'unit_price',
-        sortable: false
+        sortable: false,
+        width: '150px'
       }, {
         text: 'Total',
         value: 'total',
-        sortable: false
+        sortable: false,
+        width: '150px'
       }, {
         text: '',
         value: 'actions',
-        sortable: false
+        sortable: false,
+        width: '80px'
       }],
       form: {
         invoice_id: '',
@@ -5650,60 +5628,56 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         unit_price: 1
       });
     },
-    removeInvoices: function removeInvoices(idx) {
-      if (this.form.invoices.length > 1) {
-        this.form.invoices.splice(idx, 1);
-      }
-    },
     submit: function submit() {
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        var form, res;
+        var res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                form = {
-                  invoice_id: '#feb11321',
-                  invoice_date: new Date().toISOString().substring(0, 10),
-                  from_date: null,
-                  to_date: null,
-                  client_name: 'hasib',
-                  client_address: 'asdasdasdsadsd',
-                  client_phone: '',
-                  vat: 0,
-                  due: 0,
-                  discount: 0,
-                  comment: 'sdadsad',
-                  invoices: [{
-                    product_name: 'a',
-                    description: 'asdasdsad',
-                    quantity: 1,
-                    base: 'hr',
-                    unit_price: 10
-                  }, {
-                    product_name: 'b',
-                    description: 'asdasdsad sadsa',
-                    quantity: 2,
-                    base: 'hr',
-                    unit_price: 10
-                  }]
-                };
-                _context2.next = 3;
-                return _this2.$api.post(_this2.url, form);
+                if (!_this2.$refs.form.validate()) {
+                  _context2.next = 13;
+                  break;
+                }
 
-              case 3:
+                _context2.prev = 1;
+                _context2.next = 4;
+                return _this2.$api.post(_this2.url, _this2.form);
+
+              case 4:
                 res = _context2.sent;
-                console.log(res);
+                _context2.next = 7;
+                return _this2.$store.dispatch('set_alert', {
+                  msg: 'Created Successfully',
+                  type: 'success'
+                });
 
-              case 5:
+              case 7:
+                _this2.$refs.form.reset();
+
+                _context2.next = 13;
+                break;
+
+              case 10:
+                _context2.prev = 10;
+                _context2.t0 = _context2["catch"](1);
+
+                _this2.$globalFunc.errorAlert(_context2.t0.response);
+
+              case 13:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2);
+        }, _callee2, null, [[1, 10]]);
       }))();
+    },
+    removeInvoices: function removeInvoices(idx) {
+      if (this.form.invoices.length > 1) {
+        this.form.invoices.splice(idx, 1);
+      }
     }
   }
 });
@@ -5768,6 +5742,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5777,7 +5755,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      url: 'invoice-list/',
+      url: 'invoice/',
       headers: [{
         text: 'Invoice ID',
         value: 'invoice_id'
@@ -6514,6 +6492,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, ".own-sidebar .v-list-item--active .v-list-item__content .v-list-item__title[data-v-ee27fd12] {\n  font-weight: bold;\n}\n.own-sidebar .v-list-item--active[data-v-ee27fd12]::before {\n  display: none !important;\n}\n.own-sidebar .v-list-group__items .v-list-item[data-v-ee27fd12] {\n  color: gray;\n}\n.own-sidebar .v-list-group--active[data-v-ee27fd12] {\n  background: var(--v-sideActive-base);\n}\n.own-sidebar .v-list-group__items .v-list-item[data-v-ee27fd12] {\n  padding-left: 40px !important;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".invoice .v-form .v-input__slot .v-text-field__slot .v-label {\n  font-size: 14px !important;\n}", ""]);
 
 // exports
 
@@ -25116,6 +25113,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./create.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/errors/403.vue?vue&type=style&index=0&id=3a4e5952&scoped=true&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/errors/403.vue?vue&type=style&index=0&id=3a4e5952&scoped=true&lang=css& ***!
@@ -29409,11 +29436,12 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "v-container",
+    { staticClass: "invoice mb-8" },
     [
       _c(
         "v-form",
         {
-          ref: "addForm",
+          ref: "form",
           on: {
             submit: function ($event) {
               $event.preventDefault()
@@ -29428,98 +29456,55 @@ var render = function () {
             [
               _c(
                 "v-col",
-                { attrs: { cols: "12", md: "5" } },
+                { attrs: { cols: "12", sm: "6", md: "4" } },
                 [
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "12", md: "8" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          label: "Client Name",
-                          large: "",
-                          outlined: "",
-                          dense: "",
-                          type: "name",
-                          "hide-details": "",
-                          rules: [
-                            function (v) {
-                              return !!v || "Client Name is required"
-                            },
-                          ],
+                  _c("v-text-field", {
+                    attrs: {
+                      label: "Client Name",
+                      outlined: "",
+                      dense: "",
+                      type: "name",
+                      rules: [
+                        function (v) {
+                          return !!v || "Client Name is required"
                         },
-                        model: {
-                          value: _vm.form.client_name,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "client_name", $$v)
-                          },
-                          expression: "form.client_name",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
+                      ],
+                    },
+                    model: {
+                      value: _vm.form.client_name,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "client_name", $$v)
+                      },
+                      expression: "form.client_name",
+                    },
+                  }),
                   _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "12", md: "8" } },
-                    [
-                      _c("v-textarea", {
-                        attrs: {
-                          label: "Client Address",
-                          large: "",
-                          outlined: "",
-                          type: "text",
-                          dense: "",
-                          "hide-details": "",
-                          rows: "2",
-                          rules: [
-                            function (v) {
-                              return !!v || "Client Address is required"
-                            },
-                          ],
-                        },
-                        model: {
-                          value: _vm.form.client_address,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "client_address", $$v)
-                          },
-                          expression: "form.client_address",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
+                  _c("v-textarea", {
+                    attrs: {
+                      label: "Client Address",
+                      outlined: "",
+                      dense: "",
+                      rows: "2",
+                    },
+                    model: {
+                      value: _vm.form.client_address,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "client_address", $$v)
+                      },
+                      expression: "form.client_address",
+                    },
+                  }),
                   _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "12", md: "8" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          label: "Client Phone",
-                          large: "",
-                          outlined: "",
-                          type: "text",
-                          dense: "",
-                          "hide-details": "",
-                          rules: [
-                            function (v) {
-                              return !!v || "Client Address is required"
-                            },
-                          ],
-                        },
-                        model: {
-                          value: _vm.form.client_phone,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "client_phone", $$v)
-                          },
-                          expression: "form.client_phone",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
+                  _c("v-text-field", {
+                    attrs: { label: "Client Phone", outlined: "", dense: "" },
+                    model: {
+                      value: _vm.form.client_phone,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "client_phone", $$v)
+                      },
+                      expression: "form.client_phone",
+                    },
+                  }),
                 ],
                 1
               ),
@@ -29528,17 +29513,17 @@ var render = function () {
                 "v-col",
                 {
                   staticClass: "d-flex flex-column align-end",
-                  attrs: { cols: "12", md: "7" },
+                  attrs: { cols: "12", sm: "6", md: "8" },
                 },
                 [
                   _c("v-text-field", {
+                    staticClass: "pt-2",
                     staticStyle: { "max-width": "200px" },
                     attrs: {
                       label: "Invoice ID",
-                      large: "",
                       outlined: "",
-                      type: "text",
                       dense: "",
+                      "hide-details": "",
                       rules: [
                         function (v) {
                           return !!v || "Invoice ID is required"
@@ -29576,10 +29561,13 @@ var render = function () {
                                 _vm._g(
                                   _vm._b(
                                     {
+                                      staticClass: "pt-2",
+                                      staticStyle: { "max-width": "200px" },
                                       attrs: {
                                         label: "Date",
                                         outlined: "",
                                         dense: "",
+                                        "hide-details": "",
                                         rules: [
                                           function (v) {
                                             return !!v || "field is required"
@@ -29587,11 +29575,15 @@ var render = function () {
                                         ],
                                       },
                                       model: {
-                                        value: _vm.form.date,
+                                        value: _vm.form.invoice_date,
                                         callback: function ($$v) {
-                                          _vm.$set(_vm.form, "date", $$v)
+                                          _vm.$set(
+                                            _vm.form,
+                                            "invoice_date",
+                                            $$v
+                                          )
                                         },
-                                        expression: "form.date",
+                                        expression: "form.invoice_date",
                                       },
                                     },
                                     "v-text-field",
@@ -29622,11 +29614,11 @@ var render = function () {
                           },
                         },
                         model: {
-                          value: _vm.form.date,
+                          value: _vm.form.invoice_date,
                           callback: function ($$v) {
-                            _vm.$set(_vm.form, "date", $$v)
+                            _vm.$set(_vm.form, "invoice_date", $$v)
                           },
-                          expression: "form.date",
+                          expression: "form.invoice_date",
                         },
                       }),
                     ],
@@ -29635,7 +29627,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "v-row",
-                    { staticClass: "d-flex flex-row pa-3" },
+                    { staticClass: "d-flex flex-row pa-3 justify-end" },
                     [
                       _c(
                         "div",
@@ -29663,19 +29655,16 @@ var render = function () {
                                         _vm._g(
                                           _vm._b(
                                             {
+                                              staticClass: "pt-2",
+                                              staticStyle: {
+                                                "max-width": "150px",
+                                              },
                                               attrs: {
                                                 label: "From Date",
                                                 outlined: "",
                                                 readonly: "",
                                                 dense: "",
                                                 "hide-details": "",
-                                                rules: [
-                                                  function (v) {
-                                                    return (
-                                                      !!v || "field is required"
-                                                    )
-                                                  },
-                                                ],
                                               },
                                               model: {
                                                 value: _vm.form.from_date,
@@ -29733,7 +29722,7 @@ var render = function () {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "pr-5" },
+                        { staticClass: "pr-lg-5 pr-0" },
                         [
                           _c(
                             "v-menu",
@@ -29757,19 +29746,16 @@ var render = function () {
                                         _vm._g(
                                           _vm._b(
                                             {
+                                              staticClass: "pt-2",
+                                              staticStyle: {
+                                                "max-width": "150px",
+                                              },
                                               attrs: {
                                                 label: "To Date",
                                                 outlined: "",
                                                 readonly: "",
                                                 dense: "",
                                                 "hide-details": "",
-                                                rules: [
-                                                  function (v) {
-                                                    return (
-                                                      !!v || "field is required"
-                                                    )
-                                                  },
-                                                ],
                                               },
                                               model: {
                                                 value: _vm.form.to_date,
@@ -29825,19 +29811,20 @@ var render = function () {
                         1
                       ),
                       _vm._v(" "),
-                      _c("v-spacer"),
-                      _vm._v(" "),
                       _c(
                         "div",
+                        {
+                          staticClass: "pt-2",
+                          staticStyle: { "max-width": "150px" },
+                        },
                         [
-                          _c("v-btn", { staticClass: "info" }, [
+                          _c("v-btn", { staticClass: "info text-none" }, [
                             _vm._v("Last Month"),
                           ]),
                         ],
                         1
                       ),
-                    ],
-                    1
+                    ]
                   ),
                 ],
                 1
@@ -29855,7 +29842,11 @@ var render = function () {
                 { attrs: { cols: "12" } },
                 [
                   _c("v-data-table", {
-                    attrs: { headers: _vm.headers, items: _vm.form.invoices },
+                    attrs: {
+                      headers: _vm.headers,
+                      items: _vm.form.invoices,
+                      "hide-default-footer": "",
+                    },
                     scopedSlots: _vm._u([
                       {
                         key: "item.name",
@@ -29866,8 +29857,7 @@ var render = function () {
                             _c("v-text-field", {
                               staticClass: "my-2",
                               attrs: {
-                                large: "",
-                                solo: "",
+                                outlined: "",
                                 dense: "",
                                 rules: [
                                   function (v) {
@@ -29898,28 +29888,17 @@ var render = function () {
                           return [
                             _c("v-text-field", {
                               staticClass: "my-2",
-                              attrs: {
-                                label: "Item",
-                                large: "",
-                                outlined: "",
-                                dense: "",
-                                type: "name",
-                                rules: [
-                                  function (v) {
-                                    return !!v || "Item is required"
-                                  },
-                                ],
-                              },
+                              attrs: { outlined: "", dense: "" },
                               model: {
-                                value: _vm.form.invoices[index].product_name,
+                                value: _vm.form.invoices[index].description,
                                 callback: function ($$v) {
                                   _vm.$set(
                                     _vm.form.invoices[index],
-                                    "product_name",
+                                    "description",
                                     $$v
                                   )
                                 },
-                                expression: "form.invoices[index].product_name",
+                                expression: "form.invoices[index].description",
                               },
                             }),
                           ]
@@ -29934,11 +29913,9 @@ var render = function () {
                             _c("v-text-field", {
                               staticClass: "my-2",
                               attrs: {
-                                label: "Item",
-                                large: "",
                                 outlined: "",
                                 dense: "",
-                                type: "name",
+                                type: "number",
                                 rules: [
                                   function (v) {
                                     return !!v || "Item is required"
@@ -29946,15 +29923,15 @@ var render = function () {
                                 ],
                               },
                               model: {
-                                value: _vm.form.invoices[index].product_name,
+                                value: _vm.form.invoices[index].quantity,
                                 callback: function ($$v) {
                                   _vm.$set(
                                     _vm.form.invoices[index],
-                                    "product_name",
+                                    "quantity",
                                     $$v
                                   )
                                 },
-                                expression: "form.invoices[index].product_name",
+                                expression: "form.invoices[index].quantity",
                               },
                             }),
                           ]
@@ -29968,28 +29945,17 @@ var render = function () {
                           return [
                             _c("v-text-field", {
                               staticClass: "my-2",
-                              attrs: {
-                                label: "Item",
-                                large: "",
-                                outlined: "",
-                                dense: "",
-                                type: "name",
-                                rules: [
-                                  function (v) {
-                                    return !!v || "Item is required"
-                                  },
-                                ],
-                              },
+                              attrs: { outlined: "", dense: "", type: "name" },
                               model: {
-                                value: _vm.form.invoices[index].product_name,
+                                value: _vm.form.invoices[index].base,
                                 callback: function ($$v) {
                                   _vm.$set(
                                     _vm.form.invoices[index],
-                                    "product_name",
+                                    "base",
                                     $$v
                                   )
                                 },
-                                expression: "form.invoices[index].product_name",
+                                expression: "form.invoices[index].base",
                               },
                             }),
                           ]
@@ -30004,11 +29970,9 @@ var render = function () {
                             _c("v-text-field", {
                               staticClass: "my-2",
                               attrs: {
-                                label: "Item",
-                                large: "",
                                 outlined: "",
                                 dense: "",
-                                type: "name",
+                                type: "number",
                                 rules: [
                                   function (v) {
                                     return !!v || "Item is required"
@@ -30016,15 +29980,15 @@ var render = function () {
                                 ],
                               },
                               model: {
-                                value: _vm.form.invoices[index].product_name,
+                                value: _vm.form.invoices[index].unit_price,
                                 callback: function ($$v) {
                                   _vm.$set(
                                     _vm.form.invoices[index],
-                                    "product_name",
+                                    "unit_price",
                                     $$v
                                   )
                                 },
-                                expression: "form.invoices[index].product_name",
+                                expression: "form.invoices[index].unit_price",
                               },
                             }),
                           ]
@@ -30048,7 +30012,7 @@ var render = function () {
                                       },
                                     },
                                   },
-                                  [_vm._v("Delete")]
+                                  [_vm._v("Delete\n            ")]
                                 )
                               : _vm._e(),
                           ]
@@ -30065,22 +30029,16 @@ var render = function () {
           _vm._v(" "),
           _c(
             "v-row",
-            { staticClass: "justify-center" },
+            { staticClass: "justify-end" },
             [
               _c(
-                "v-col",
-                { attrs: { cols: "12", md: "9" } },
-                [
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "success", block: "" },
-                      on: { click: _vm.addInvoiceItem },
-                    },
-                    [_vm._v(" Add Item")]
-                  ),
-                ],
-                1
+                "v-btn",
+                {
+                  staticClass: "px-5 ma-4",
+                  attrs: { color: "success", small: "" },
+                  on: { click: _vm.addInvoiceItem },
+                },
+                [_vm._v(" Add Item")]
               ),
             ],
             1
@@ -30122,22 +30080,17 @@ var render = function () {
               _c(
                 "v-col",
                 {
-                  staticClass: "d-flex flex-column",
+                  staticClass: "d-flex flex-column align-end",
                   attrs: { cols: "12", md: "6" },
                 },
                 [
                   _c("v-text-field", {
+                    staticStyle: { "max-width": "200px" },
                     attrs: {
                       label: "Vat",
-                      large: "",
                       outlined: "",
                       dense: "",
                       type: "number",
-                      rules: [
-                        function (v) {
-                          return !!v || "field is required"
-                        },
-                      ],
                     },
                     model: {
                       value: _vm.form.vat,
@@ -30149,9 +30102,9 @@ var render = function () {
                   }),
                   _vm._v(" "),
                   _c("v-text-field", {
+                    staticStyle: { "max-width": "200px" },
                     attrs: {
                       label: "Discount",
-                      large: "",
                       outlined: "",
                       dense: "",
                       type: "number",
@@ -30166,17 +30119,12 @@ var render = function () {
                   }),
                   _vm._v(" "),
                   _c("v-text-field", {
+                    staticStyle: { "max-width": "200px" },
                     attrs: {
                       label: "Due",
-                      large: "",
                       outlined: "",
                       dense: "",
-                      type: "text",
-                      rules: [
-                        function (v) {
-                          return !!v || "field is required"
-                        },
-                      ],
+                      type: "number",
                     },
                     model: {
                       value: _vm.form.due,
@@ -30188,9 +30136,9 @@ var render = function () {
                   }),
                   _vm._v(" "),
                   _c("v-text-field", {
+                    staticStyle: { "max-width": "200px" },
                     attrs: {
                       label: "Total",
-                      large: "",
                       outlined: "",
                       dense: "",
                       readonly: "",
@@ -30198,6 +30146,23 @@ var render = function () {
                   }),
                 ],
                 1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "justify-center text-center" },
+            [
+              _c(
+                "v-btn",
+                {
+                  staticClass: "text-none font-weight-bold",
+                  attrs: { color: "primary", type: "submit", small: "" },
+                  on: { click: _vm.submit },
+                },
+                [_vm._v("\n              Submit\n            ")]
               ),
             ],
             1
@@ -30234,6 +30199,22 @@ var render = function () {
   return _c(
     "v-container",
     [
+      _c(
+        "div",
+        { staticClass: "text-right my-4" },
+        [
+          _c(
+            "v-btn",
+            {
+              staticClass: "text-none",
+              attrs: { small: "", color: "primary", to: "/invoice" },
+            },
+            [_vm._v("\n      Create Invoice\n    ")]
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
       _c(
         "v-card",
         { staticClass: "my-2 pa-3" },
@@ -101034,7 +101015,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _create_vue_vue_type_template_id_bb7b6c46___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create.vue?vue&type=template&id=bb7b6c46& */ "./resources/js/views/invoice/create.vue?vue&type=template&id=bb7b6c46&");
 /* harmony import */ var _create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./create.vue?vue&type=script&lang=js& */ "./resources/js/views/invoice/create.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./create.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -101042,7 +101025,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _create_vue_vue_type_template_id_bb7b6c46___WEBPACK_IMPORTED_MODULE_0__["render"],
   _create_vue_vue_type_template_id_bb7b6c46___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -101071,6 +101054,22 @@ component.options.__file = "resources/js/views/invoice/create.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./create.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/invoice/create.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss& ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./create.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/invoice/create.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
 
 /***/ }),
 
@@ -101386,8 +101385,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\project\python\AMSL\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\project\python\AMSL\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\devghor\AMSL\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\devghor\AMSL\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
