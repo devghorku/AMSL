@@ -28,6 +28,7 @@
             :server-items-length="total"
             class="elevation-1"
             :footer-props="{'items-per-page-options': [10, 20, 30, 40, 50]}"
+            @click:row="(item, slot) => {if(isExpand){slot.expand(!slot.isExpanded)}}"
         >
           <template v-for="(slot, name) in $scopedSlots" v-slot:[name]="item">
             <slot :name="name" v-bind="item"></slot>
@@ -104,6 +105,10 @@ export default {
       type: Object,
       default: () => {
       }
+    },
+    isExpand: {
+      type: Boolean,
+      default: () => false
     }
 
   },

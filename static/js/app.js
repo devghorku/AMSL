@@ -2579,6 +2579,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     app_name: {
@@ -2620,6 +2621,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     otherFilter: {
       type: Object,
       "default": function _default() {}
+    },
+    isExpand: {
+      type: Boolean,
+      "default": function _default() {
+        return false;
+      }
     }
   },
   data: function data() {
@@ -3390,6 +3397,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3412,10 +3425,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, // {text: 'NID/Passport', value: 'nid'},
       // {text: 'Address', value: 'address'},
       // {text: 'Birth Date', value: 'birth_date'},
+      // {text: 'Description', value: 'description'},
       {
-        text: 'Description',
-        value: 'description'
-      }, {
         text: 'Active',
         value: 'status'
       }, {
@@ -25833,6 +25844,11 @@ var render = function () {
               "update:options": function ($event) {
                 _vm.options = $event
               },
+              "click:row": function (item, slot) {
+                if (_vm.isExpand) {
+                  slot.expand(!slot.isExpanded)
+                }
+              },
             },
             scopedSlots: _vm._u(
               [
@@ -26358,6 +26374,7 @@ var render = function () {
               tableHeadline: "Manage Employee",
               headers: _vm.headers,
               otherFilter: { active: _vm.active },
+              "is-expand": "",
             },
             on: { updateModal: _vm.updateModal },
             scopedSlots: _vm._u([
@@ -26405,6 +26422,18 @@ var render = function () {
                         expression: "item.active",
                       },
                     }),
+                  ]
+                },
+              },
+              {
+                key: "expanded-item",
+                fn: function (ref) {
+                  var headers = ref.headers
+                  var item = ref.item
+                  return [
+                    _c("td", { attrs: { colspan: headers.length } }, [
+                      _vm._v("\n          " + _vm._s(item) + "\n        "),
+                    ]),
                   ]
                 },
               },

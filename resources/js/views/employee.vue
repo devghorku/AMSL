@@ -15,6 +15,7 @@
           ref="dataTable"
           :otherFilter="{active:active}"
           @updateModal="updateModal"
+          is-expand
       >
         <template v-slot:other_filter>
           <v-switch
@@ -33,6 +34,11 @@
               dense
               inset
           ></v-switch>
+        </template>
+        <template v-slot:expanded-item="{ headers,item  }">
+          <td :colspan="headers.length">
+            {{item }}
+          </td>
         </template>
       </data-table>
     </v-card>
@@ -344,18 +350,17 @@ export default {
         // {text: 'NID/Passport', value: 'nid'},
         // {text: 'Address', value: 'address'},
         // {text: 'Birth Date', value: 'birth_date'},
-        {text: 'Description', value: 'description'},
+        // {text: 'Description', value: 'description'},
         {text: 'Active', value: 'status'},
         {text: 'Action', value: 'actions', width: '100px', align: 'center', sortable: false},
       ],
       menu2: false,
-      active:true,
+      active: true,
       form: {employee_id: null, nid: null, birth_date: null},
       editForm: {},
       deleteItem: {},
       addModal: false,
       editModal: false,
-
       loading: false,
       total: 0,
       options: {},
@@ -369,8 +374,8 @@ export default {
     await this.$store.dispatch('getEmployeeCategory')
   },
   methods: {
-    getData(){
-      this.$nextTick(()=>{
+    getData() {
+      this.$nextTick(() => {
         this.$refs.dataTable.getData();
       })
 
