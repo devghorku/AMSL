@@ -8,15 +8,20 @@ const opts = {}
 
 export default new Vuetify(
     {
-    theme: {
-        dark: false,
-        themes: {
-            light: {
-                primary:'#1AABA5',
-                lightWhite: '#F5F6FA',
-                grayTxt: '#BABABB'
+        theme: {
+            options: {
+                customProperties: true
+            },
+            dark: false,
+            themes: {
+                light: {
+                    primary: '#1AABA5',
+                    lightWhite: '#F5F6FA',
+                    grayTxt: '#BABABB',
+                    sideActive: '#171717',
+                    sidebarBg: '#2D3744',
+                }
             }
         }
     }
-}
 )

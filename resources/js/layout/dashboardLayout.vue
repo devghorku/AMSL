@@ -5,48 +5,50 @@
         :clipped="true"
         fixed
         app
-        color="#2D3744"
+        color="sidebarBg"
         dark
+        class="own-sidebar"
     >
-      <!--            <v-list dense>-->
-      <!--                <template v-for="(item, i) in items">-->
-      <!--                    <v-list-item-->
-      <!--                            :key="i"-->
-      <!--                            :to="item.link"-->
-      <!--                    >-->
-      <!--                        <v-list-item-content>-->
-      <!--                            <v-list-item-title v-text="item.title"/>-->
-      <!--                        </v-list-item-content>-->
-      <!--                    </v-list-item>-->
-      <!--                    <v-divider :key="'d'+i"></v-divider>-->
-      <!--                </template>-->
-
-      <!--            </v-list>-->
       <v-list dense>
-      <v-list-group
-        v-for="item in items"
-        :key="item.title"
-        no-action
-        active-class="list_group"
-      >
-        <template v-slot:activator>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" style="font-size: 16px;"></v-list-item-title>
-          </v-list-item-content>
-        </template>
-          <v-divider></v-divider>
-        <v-list-item
-          v-for="child in item.items"
-          :key="child.title"
-          :to="child.link"
-          active-class="list_item"
+        <template v-for="(item,idx) in items"
         >
-          <v-list-item-content>
-            <v-list-item-title v-text="child.title" ></v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list-group>
-    </v-list>
+          <v-list-item v-if="!(item.items && item.items.length>0)"
+                       :key="idx"
+                       active-class="sideActive primary--text"
+                       :to="item.link">
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title">
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-group
+              v-else
+              no-action
+              active-class="white--text"
+              :key="idx"
+          >
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title v-text="item.title"></v-list-item-title>
+              </v-list-item-content>
+            </template>
+            <v-divider></v-divider>
+            <v-list-item
+                v-for="child in item.items"
+                :key="child.title"
+                :to="child.link"
+                active-class="sideActive primary--text"
+            >
+              <v-list-item-content>
+                <v-list-item-title v-text="child.title"></v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
+          <v-divider :key="'d'+idx"></v-divider>
+        </template>
+
+      </v-list>
     </v-navigation-drawer>
     <v-app-bar
         :clipped-left="true"
@@ -71,9 +73,6 @@
     <v-main class="lightWhite">
       <router-view/>
     </v-main>
-    <!--        <v-footer dark inset app absolute>-->
-    <!--            <div>© 2022 <a href="https://www.fiverr.com/hasibarmanku">Devghor</a> , All Rights Reserved</div>-->
-    <!--        </v-footer>-->
     <v-snackbar
         :timeout="2500"
         :value="!!snackbar.message"
@@ -107,25 +106,31 @@ export default {
   data: () => ({
     items: [
 
-      {title: 'Expense ', link: '',items:[
-          {title:'Expense', link:'/expense'},
-          {title:'Expense Category', link:'/expense-category'}
-        ]},
-      {title: 'Income ', link: '',items:[
-          {title:'Income', link:'/income'},
-          {title:'Income Category', link:'/income-category'}
-        ]},
-      {title: 'Employee ', link: '',items:[
-          {title:'Employee', link:'/employee'},
-          {title:'Employee Category', link:'/employee-category'}
-        ]},
-      {title: 'Payroll ', link: '',items:[
-          {title:'Payroll', link:'/payroll'},
-        ]},
-      {title: 'Invoice ', link: '',items:[
-          {title:'Invoice', link:'/invoice'},
-          {title:'Invoice Items', link:'/invoice-items'}
-        ]},
+      {
+        title: 'Expense ', link: '', items: [
+          {title: 'Expense', link: '/expense'},
+          {title: 'Expense Category', link: '/expense-category'}
+        ]
+      },
+      {
+        title: 'Income ', link: '', items: [
+          {title: 'Income', link: '/income'},
+          {title: 'Income Category', link: '/income-category'}
+        ]
+      },
+      {
+        title: 'Employee ', link: '', items: [
+          {title: 'Employee', link: '/employee'},
+          {title: 'Employee Category', link: '/employee-category'}
+        ]
+      },
+      {title: 'Payroll ', link: '/payroll'},
+      {
+        title: 'Invoice ', link: '', items: [
+          {title: 'Invoice Create', link: '/invoice'},
+          {title: 'Invoice List', link: '/invoice-list'}
+        ]
+      },
 
     ],
     drawer: true,
@@ -140,57 +145,35 @@ export default {
 </script>
 <style scoped lang="scss">
 
-.v-list-group--active{
-  background: #171717;
+.own-sidebar {
   .v-list-item--active {
     .v-list-item__content {
       .v-list-item__title {
         font-weight: bold;
-
-        color: white !important;
-         background: #171717;
       }
+    }
+
+    &::before {
+      display: none !important;
     }
   }
 
-    .v-list-group__items {
-      .v-list-item {
-        background: #171717;
-        color: gray;
-      }
-      .v-list-item--active {
-        background: #171717;
-        color: white;
-        &::before{
-          display: none !important;
-        }
-      }
-
+  .v-list-group__items {
+    .v-list-item {
+      color: gray;
     }
+  }
 
-}
-.list_group{
-  font-weight: bold;
-  background: #171717;
-  v-list-group__items{
-    background: #171717;
+  .v-list-group--active {
+    background: var(--v-sideActive-base);
+
   }
-}
-.list_item{
-  font-weight: bold !important;
-  font-size:20px !important;
-  color:#171717;
-.v-list-item__content{
-   .v-list-item__title{
-    font-weight: bold;
-     color: white;
+
+  .v-list-group__items {
+    .v-list-item {
+      padding-left: 40px !important;
+    }
   }
-}
 }
 
-.v-list-group__items{
-  .v-list-item {
-    padding-left: 40px !important;
-  }
-}
 </style>

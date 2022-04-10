@@ -2474,10 +2474,10 @@ module.exports = {
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
   \*****************************************/
-/*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, bundlesize, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
+/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, browser, bugs, bundleDependencies, bundlesize, dependencies, deprecated, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"D:\\\\devghor\\\\AMSL\"]],\"_from\":\"axios@0.21.4\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.4\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.4\",\"saveSpec\":null,\"fetchSpec\":\"0.21.4\"},\"_requiredBy\":[\"/\",\"/localtunnel\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_spec\":\"0.21.4\",\"_where\":\"D:\\\\devghor\\\\AMSL\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
+module.exports = JSON.parse("{\"_from\":\"axios@^0.21.1\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"axios@^0.21.1\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"^0.21.1\",\"saveSpec\":null,\"fetchSpec\":\"^0.21.1\"},\"_requiredBy\":[\"/\",\"/localtunnel\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_shasum\":\"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575\",\"_spec\":\"axios@^0.21.1\",\"_where\":\"D:\\\\project\\\\python\\\\AMSL\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundleDependencies\":false,\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"deprecated\":false,\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
 
 /***/ }),
 
@@ -2984,7 +2984,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'App',
@@ -3023,20 +3022,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }]
       }, {
         title: 'Payroll ',
-        link: '',
-        items: [{
-          title: 'Payroll',
-          link: '/payroll'
-        }]
+        link: '/payroll'
       }, {
         title: 'Invoice ',
         link: '',
         items: [{
-          title: 'Invoice',
+          title: 'Invoice Create',
           link: '/invoice'
         }, {
-          title: 'Invoice Items',
-          link: '/invoice-items'
+          title: 'Invoice List',
+          link: '/invoice-list'
         }]
       }],
       drawer: true
@@ -6024,7 +6019,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".v-list-group--active[data-v-ee27fd12] {\n  background: #171717;\n}\n.v-list-group--active .v-list-item--active .v-list-item__content .v-list-item__title[data-v-ee27fd12] {\n  font-weight: bold;\n  color: white !important;\n  background: #171717;\n}\n.v-list-group--active .v-list-group__items .v-list-item[data-v-ee27fd12] {\n  background: #171717;\n  color: gray;\n}\n.v-list-group--active .v-list-group__items .v-list-item--active[data-v-ee27fd12] {\n  background: #171717;\n  color: white;\n}\n.v-list-group--active .v-list-group__items .v-list-item--active[data-v-ee27fd12]::before {\n  display: none !important;\n}\n.list_group[data-v-ee27fd12] {\n  font-weight: bold;\n  background: #171717;\n}\n.list_group v-list-group__items[data-v-ee27fd12] {\n  background: #171717;\n}\n.list_item[data-v-ee27fd12] {\n  font-weight: bold !important;\n  font-size: 20px !important;\n  color: #171717;\n}\n.list_item .v-list-item__content .v-list-item__title[data-v-ee27fd12] {\n  font-weight: bold;\n  color: white;\n}\n.v-list-group__items .v-list-item[data-v-ee27fd12] {\n  padding-left: 40px !important;\n}", ""]);
+exports.push([module.i, ".own-sidebar .v-list-item--active .v-list-item__content .v-list-item__title[data-v-ee27fd12] {\n  font-weight: bold;\n}\n.own-sidebar .v-list-item--active[data-v-ee27fd12]::before {\n  display: none !important;\n}\n.own-sidebar .v-list-group__items .v-list-item[data-v-ee27fd12] {\n  color: gray;\n}\n.own-sidebar .v-list-group--active[data-v-ee27fd12] {\n  background: var(--v-sideActive-base);\n}\n.own-sidebar .v-list-group__items .v-list-item[data-v-ee27fd12] {\n  padding-left: 40px !important;\n}", ""]);
 
 // exports
 
@@ -25578,11 +25573,12 @@ var render = function () {
       _c(
         "v-navigation-drawer",
         {
+          staticClass: "own-sidebar",
           attrs: {
             clipped: true,
             fixed: "",
             app: "",
-            color: "#2D3744",
+            color: "sidebarBg",
             dark: "",
           },
           model: {
@@ -25597,67 +25593,105 @@ var render = function () {
           _c(
             "v-list",
             { attrs: { dense: "" } },
-            _vm._l(_vm.items, function (item) {
-              return _c(
-                "v-list-group",
-                {
-                  key: item.title,
-                  attrs: { "no-action": "", "active-class": "list_group" },
-                  scopedSlots: _vm._u(
-                    [
-                      {
-                        key: "activator",
-                        fn: function () {
-                          return [
-                            _c(
-                              "v-list-item-content",
+            [
+              _vm._l(_vm.items, function (item, idx) {
+                return [
+                  !(item.items && item.items.length > 0)
+                    ? _c(
+                        "v-list-item",
+                        {
+                          key: idx,
+                          attrs: {
+                            "active-class": "sideActive primary--text",
+                            to: item.link,
+                          },
+                        },
+                        [
+                          _c(
+                            "v-list-item-content",
+                            [
+                              _c("v-list-item-title", {
+                                domProps: { textContent: _vm._s(item.title) },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      )
+                    : _c(
+                        "v-list-group",
+                        {
+                          key: idx,
+                          attrs: {
+                            "no-action": "",
+                            "active-class": "white--text",
+                          },
+                          scopedSlots: _vm._u(
+                            [
+                              {
+                                key: "activator",
+                                fn: function () {
+                                  return [
+                                    _c(
+                                      "v-list-item-content",
+                                      [
+                                        _c("v-list-item-title", {
+                                          domProps: {
+                                            textContent: _vm._s(item.title),
+                                          },
+                                        }),
+                                      ],
+                                      1
+                                    ),
+                                  ]
+                                },
+                                proxy: true,
+                              },
+                            ],
+                            null,
+                            true
+                          ),
+                        },
+                        [
+                          _vm._v(" "),
+                          _c("v-divider"),
+                          _vm._v(" "),
+                          _vm._l(item.items, function (child) {
+                            return _c(
+                              "v-list-item",
+                              {
+                                key: child.title,
+                                attrs: {
+                                  to: child.link,
+                                  "active-class": "sideActive primary--text",
+                                },
+                              },
                               [
-                                _c("v-list-item-title", {
-                                  staticStyle: { "font-size": "16px" },
-                                  domProps: { textContent: _vm._s(item.title) },
-                                }),
+                                _c(
+                                  "v-list-item-content",
+                                  [
+                                    _c("v-list-item-title", {
+                                      domProps: {
+                                        textContent: _vm._s(child.title),
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
                               ],
                               1
-                            ),
-                          ]
-                        },
-                        proxy: true,
-                      },
-                    ],
-                    null,
-                    true
-                  ),
-                },
-                [
+                            )
+                          }),
+                        ],
+                        2
+                      ),
                   _vm._v(" "),
-                  _c("v-divider"),
-                  _vm._v(" "),
-                  _vm._l(item.items, function (child) {
-                    return _c(
-                      "v-list-item",
-                      {
-                        key: child.title,
-                        attrs: { to: child.link, "active-class": "list_item" },
-                      },
-                      [
-                        _c(
-                          "v-list-item-content",
-                          [
-                            _c("v-list-item-title", {
-                              domProps: { textContent: _vm._s(child.title) },
-                            }),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    )
-                  }),
-                ],
-                2
-              )
-            }),
-            1
+                  _c("v-divider", { key: "d" + idx }),
+                ]
+              }),
+            ],
+            2
           ),
         ],
         1
@@ -93565,12 +93599,17 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_
 var opts = {};
 /* harmony default export */ __webpack_exports__["default"] = (new vuetify__WEBPACK_IMPORTED_MODULE_1___default.a({
   theme: {
+    options: {
+      customProperties: true
+    },
     dark: false,
     themes: {
       light: {
         primary: '#1AABA5',
         lightWhite: '#F5F6FA',
-        grayTxt: '#BABABB'
+        grayTxt: '#BABABB',
+        sideActive: '#171717',
+        sidebarBg: '#2D3744'
       }
     }
   }
@@ -95220,8 +95259,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\devghor\AMSL\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\devghor\AMSL\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\project\python\AMSL\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\project\python\AMSL\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
