@@ -5561,15 +5561,39 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
     };
   },
+  mounted: function mounted() {
+    var _this = this;
+
+    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      var res2;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return _this.$api.get(_this.url);
+
+            case 2:
+              res2 = _context.sent;
+              console.log(res2);
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
+  },
   methods: {
     submit: function submit() {
-      var _this = this;
+      var _this2 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var form, res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
-            switch (_context.prev = _context.next) {
+            switch (_context2.prev = _context2.next) {
               case 0:
                 form = {
                   invoice_id: '#feb11321',
@@ -5583,7 +5607,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   due: 0,
                   discount: 0,
                   comment: 'sdadsad',
-                  invoice_set: [{
+                  invoices: [{
                     product_name: 'a',
                     description: 'asdasdsad',
                     quantity: 1,
@@ -5597,19 +5621,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     unit_price: 10
                   }]
                 };
-                _context.next = 3;
-                return _this.$api.post(_this.url, form);
+                _context2.next = 3;
+                return _this2.$api.post(_this2.url, form);
 
               case 3:
-                res = _context.sent;
+                res = _context2.sent;
                 console.log(res);
 
               case 5:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee);
+        }, _callee2);
       }))();
     }
   }

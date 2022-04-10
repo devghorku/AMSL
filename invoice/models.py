@@ -23,7 +23,7 @@ class Invoice(models.Model):
 
 
 class InvoiceItem(models.Model):
-    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE)
+    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE, related_name='invoice')
     product_name = models.CharField(max_length=250)
     description = models.TextField(null=True, blank=True)
     quantity = models.FloatField()
@@ -35,3 +35,5 @@ class InvoiceItem(models.Model):
     class Meta:
         ordering = ['-id']
 
+    def __str__(self):
+        return self.invoice.invoice_id

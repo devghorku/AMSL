@@ -108,7 +108,7 @@ class InvoiceItemSerializer(serializers.ModelSerializer):
 
 
 class InvoiceSerializer(serializers.ModelSerializer):
-    invoices = InvoiceItemSerializer(source='invoice_set')
+    invoice = InvoiceItemSerializer(many=True)
 
     class Meta:
         model = Invoice
@@ -116,20 +116,19 @@ class InvoiceSerializer(serializers.ModelSerializer):
 
 
 class InvoicePostSerializer(serializers.ModelSerializer):
-    invoice_set = InvoiceItemSerializer(many=True)
+    invoices = InvoiceItemSerializer(many=True, write_only=True)
 
     class Meta:
         model = Invoice
         fields = '__all__'
 
     def create(self, validated_data):
-        invoice_validated_data = validated_data.pop('invoice_set')
-        invoice_item = Invoice.objects.create(**validated_data)
-        invoice_set_serializer = self.fields['invoice_set']
-        for each in invoice_validated_data:
-            each['invoice'] = invoice_item
-        invoice_set_serializer.create(invoice_validated_data)
-        return invoice_item
+        invoice_data = validated_data.pop('invoices', [])
+        invoice = Invoice.objects.create(**validated_data)
+        for item in invoice_data:
+            item['invoice'] = invoice
+            InvoiceItem.objects.create(**item)
+        return invoice
 
 # class ProductTypeSerializer(serializers.ModelSerializer):
 #     class Meta:

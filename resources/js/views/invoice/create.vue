@@ -297,6 +297,10 @@ export default {
       },
     }
   },
+  async mounted(){
+    const res2 = await this.$api.get(this.url);
+    console.log(res2)
+  },
   methods:{
     async submit(){
       const  form = {
@@ -311,7 +315,7 @@ export default {
         due: 0,
         discount: 0,
         comment: 'sdadsad',
-        invoice_set: [
+        invoices: [
           {
             product_name: 'a',
             description: 'asdasdsad',
@@ -330,6 +334,7 @@ export default {
       };
        const res = await this.$api.post(this.url, form);
        console.log(res)
+
     }
   }
 }

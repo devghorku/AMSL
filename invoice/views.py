@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import viewsets
-from AMSL.serializers import InvoicePostSerializer, InvoiceSerializer, InvoiceItemSerializer
+from AMSL.serializers import  InvoicePostSerializer,InvoiceSerializer, InvoiceItemSerializer
 from .models import Invoice, InvoiceItem
 from AMSL.pagination import CustomPagination
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
@@ -19,9 +19,9 @@ class InvoiceViewSet(viewsets.ModelViewSet):
     queryset = Invoice.objects.all()
     serializer_class = InvoiceSerializer
     filter_backends = (SearchFilter, OrderingFilter)
-    search_fields = ('Items__name',)
-    ordering_fields = ('Items',)
-    ordering = ('-Items__id')
+    search_fields = ('invoice_id',)
+    ordering_fields = ('-id',)
+    ordering = ('-invoice_id')
     pagination_class = CustomPagination
     permission_classes = [IsAdminUser, IsAuthenticated]
 
