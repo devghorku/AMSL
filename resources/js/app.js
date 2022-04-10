@@ -1,5 +1,6 @@
 window.Vue = require('vue');
 import Vue from 'vue'
+Vue.use(require('vue-moment'));
 import vuetify from './plugins/vuetify'
 import _ from 'lodash'
 import API from './services/API'

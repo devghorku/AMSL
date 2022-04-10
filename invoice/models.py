@@ -19,11 +19,11 @@ class Invoice(models.Model):
         ordering = ['-id']
 
     def __str__(self):
-        return self.name
+        return self.invoice_id
 
 
 class InvoiceItem(models.Model):
-    invoice_id = models.ForeignKey(Invoice, on_delete=models.CASCADE, related_name="invoice")
+    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE)
     product_name = models.CharField(max_length=250)
     description = models.TextField(null=True, blank=True)
     quantity = models.FloatField()

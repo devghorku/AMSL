@@ -103,8 +103,8 @@ const router = new VueRouter({
                     component: InvoiceList,
                 },
                 {
-                    path: 'invoice-view',
-                    name: 'view',
+                    path: 'invoice/:id',
+                    name: 'invoiceView',
                     component: InvoiceView,
                 },
             ]
