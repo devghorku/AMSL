@@ -124,8 +124,7 @@ export default {
         ]},
       {title: 'Invoice ', link: '',items:[
           {title:'Invoice', link:'/invoice'},
-          {title:'Invoice List', link:'/invoice-list'},
-          {title:'View Invoice', link:'/invoice-view'}
+          {title:'Invoice List', link:'/invoice-list'}
         ]},
 
     ],
