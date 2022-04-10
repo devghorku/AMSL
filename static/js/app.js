@@ -2474,10 +2474,10 @@ module.exports = {
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
   \*****************************************/
-/*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, bundlesize, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
+/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, browser, bugs, bundleDependencies, bundlesize, dependencies, deprecated, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"D:\\\\devghor\\\\AMSL\"]],\"_from\":\"axios@0.21.4\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.4\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.4\",\"saveSpec\":null,\"fetchSpec\":\"0.21.4\"},\"_requiredBy\":[\"/\",\"/localtunnel\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_spec\":\"0.21.4\",\"_where\":\"D:\\\\devghor\\\\AMSL\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
+module.exports = JSON.parse("{\"_from\":\"axios@^0.21.1\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"axios@^0.21.1\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"^0.21.1\",\"saveSpec\":null,\"fetchSpec\":\"^0.21.1\"},\"_requiredBy\":[\"/\",\"/localtunnel\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_shasum\":\"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575\",\"_spec\":\"axios@^0.21.1\",\"_where\":\"D:\\\\project\\\\python\\\\AMSL\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundleDependencies\":false,\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"deprecated\":false,\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
 
 /***/ }),
 
@@ -2494,10 +2494,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
+//
 //
 //
 //
@@ -2597,18 +2606,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return [];
       }
     },
-    addBtnLink: {
-      type: String,
-      "default": function _default() {
-        return '';
-      }
-    },
-    editBtnLink: {
-      type: String,
-      "default": function _default() {
-        return '';
-      }
-    },
     searchField: {
       type: Boolean,
       "default": function _default() {
@@ -2621,25 +2618,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return true;
       }
     },
-    detailsBtn: {
-      type: Boolean,
-      "default": function _default() {
-        return false;
-      }
+    otherFilter: {
+      type: Object,
+      "default": function _default() {}
     },
-    detailsBtnLink: {
-      type: String,
-      "default": function _default() {
-        return '';
-      }
-    },
-    exportButton: {
-      type: Boolean,
-      "default": function _default() {
-        return false;
-      }
-    },
-    importButton: {
+    isExpand: {
       type: Boolean,
       "default": function _default() {
         return false;
@@ -2666,33 +2649,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       deep: true
     }
   },
-  computed: {// checkAddButtonPerm() {
-    //     if (this.app_name) {
-    //         return !!this.$globalFunc.isPermit('add_' + this.app_name);
-    //     }
-    //     return true
-    // },
-    // checkDeleteButtonPerm() {
-    //     if (this.app_name) {
-    //         return !!this.$globalFunc.isPermit('delete_' + this.app_name);
-    //     }
-    //     return true
-    // },
-    // checkEditButtonPerm() {
-    //     if (this.app_name) {
-    //
-    //         return !!this.$globalFunc.isPermit('change_' + this.app_name);
-    //     }
-    //     return true
-    // },
-    // checkDetialsButtonPerm() {
-    //     if (this.app_name) {
-    //
-    //         return !!this.$globalFunc.isPermit('view_' + this.app_name);
-    //     }
-    //     return true
-    // }
-  },
+  computed: {},
   methods: {
     getData: function getData() {
       var _this = this;
@@ -2707,12 +2664,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.prev = 0;
                 _this.loading = true;
                 _this$options = _this.options, sortBy = _this$options.sortBy, sortDesc = _this$options.sortDesc, page = _this$options.page, itemsPerPage = _this$options.itemsPerPage;
-                params = {
+                params = _objectSpread({
                   page: page,
                   search: _this.search,
                   per_page: itemsPerPage,
                   ordering: _this.$globalFunc.getOrder(sortBy, sortDesc)
-                };
+                }, _this.otherFilter);
                 _context.next = 6;
                 return _this.$api.get(_this.url, {
                   params: params
@@ -3434,6 +3391,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3445,29 +3414,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return {
       url: 'employee/',
       headers: [{
-        text: 'Category',
-        value: 'category.name'
-      }, {
         text: 'Name',
         value: 'name'
       }, {
+        text: 'Profession',
+        value: 'category.name'
+      }, {
         text: 'Employee_ID',
         value: 'employee_id'
-      }, {
-        text: 'NID/Passport',
-        value: 'nid'
-      }, {
-        text: 'Address',
-        value: 'address'
-      }, {
-        text: 'Birth Date',
-        value: 'birth_date'
-      }, {
-        text: 'Description',
-        value: 'description'
-      }, {
+      }, // {text: 'NID/Passport', value: 'nid'},
+      // {text: 'Address', value: 'address'},
+      // {text: 'Birth Date', value: 'birth_date'},
+      // {text: 'Description', value: 'description'},
+      {
         text: 'Active',
-        value: 'active'
+        value: 'status'
       }, {
         text: 'Action',
         value: 'actions',
@@ -3476,6 +3437,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         sortable: false
       }],
       menu2: false,
+      active: true,
       form: {
         employee_id: null,
         nid: null,
@@ -3511,13 +3473,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }))();
   },
   methods: {
+    getData: function getData() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        _this2.$refs.dataTable.getData();
+      });
+    },
     updateModal: function updateModal(form) {
       this.editForm = JSON.parse(JSON.stringify(form));
       this.editForm.category = form.category.id;
       this.editModal = true;
     },
     addItem: function addItem() {
-      var _this2 = this;
+      var _this3 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var res;
@@ -3525,29 +3494,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                if (!_this2.$refs.form.validate()) {
+                if (!_this3.$refs.form.validate()) {
                   _context2.next = 15;
                   break;
                 }
 
                 _context2.prev = 1;
                 _context2.next = 4;
-                return _this2.$api.post(_this2.url, _this2.form);
+                return _this3.$api.post(_this3.url, _this3.form);
 
               case 4:
                 res = _context2.sent;
                 _context2.next = 7;
-                return _this2.$store.dispatch('set_alert', {
+                return _this3.$store.dispatch('set_alert', {
                   msg: 'Created Successfully',
                   type: 'success'
                 });
 
               case 7:
-                _this2.$refs.form.reset();
+                _this3.$refs.form.reset();
 
-                _this2.$refs.dataTable.getData();
+                _this3.$refs.dataTable.getData();
 
-                _this2.addModal = false;
+                _this3.addModal = false;
                 _context2.next = 15;
                 break;
 
@@ -3555,7 +3524,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 _context2.prev = 12;
                 _context2.t0 = _context2["catch"](1);
 
-                _this2.$globalFunc.errorAlert(_context2.t0.response);
+                _this3.$globalFunc.errorAlert(_context2.t0.response);
 
               case 15:
               case "end":
@@ -3566,7 +3535,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }))();
     },
     updateItem: function updateItem() {
-      var _this3 = this;
+      var _this4 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
         var res;
@@ -3574,46 +3543,87 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                console.log(_this3.editForm);
-
-                if (!_this3.$refs.editForm.validate()) {
-                  _context3.next = 16;
+                if (!_this4.$refs.editForm.validate()) {
+                  _context3.next = 15;
                   break;
                 }
 
-                _context3.prev = 2;
-                _context3.next = 5;
-                return _this3.$api.patch(_this3.url + _this3.editForm.id + '/', _this3.editForm);
+                _context3.prev = 1;
+                _context3.next = 4;
+                return _this4.$api.patch(_this4.url + _this4.editForm.id + '/', _this4.editForm);
 
-              case 5:
+              case 4:
                 res = _context3.sent;
-                _context3.next = 8;
-                return _this3.$store.dispatch('set_alert', {
+                _context3.next = 7;
+                return _this4.$store.dispatch('set_alert', {
                   msg: 'Update Successfully',
                   type: 'success'
                 });
 
-              case 8:
-                _this3.$refs.editForm.reset();
+              case 7:
+                _this4.$refs.editForm.reset();
 
-                _this3.$refs.dataTable.getData();
+                _this4.$refs.dataTable.getData();
 
-                _this3.editModal = false;
-                _context3.next = 16;
+                _this4.editModal = false;
+                _context3.next = 15;
                 break;
 
-              case 13:
-                _context3.prev = 13;
-                _context3.t0 = _context3["catch"](2);
+              case 12:
+                _context3.prev = 12;
+                _context3.t0 = _context3["catch"](1);
 
-                _this3.$globalFunc.errorAlert(_context3.t0.response);
+                _this4.$globalFunc.errorAlert(_context3.t0.response);
 
-              case 16:
+              case 15:
               case "end":
                 return _context3.stop();
             }
           }
-        }, _callee3, null, [[2, 13]]);
+        }, _callee3, null, [[1, 12]]);
+      }))();
+    },
+    toggleItem: function toggleItem(item) {
+      var _this5 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                _context4.prev = 0;
+                _context4.next = 3;
+                return _this5.$api.patch(_this5.url + item.id + '/', {
+                  active: item.active
+                });
+
+              case 3:
+                res = _context4.sent;
+                _context4.next = 6;
+                return _this5.$store.dispatch('set_alert', {
+                  msg: 'Update Successfully',
+                  type: 'success'
+                });
+
+              case 6:
+                _this5.$refs.dataTable.getData();
+
+                _context4.next = 12;
+                break;
+
+              case 9:
+                _context4.prev = 9;
+                _context4.t0 = _context4["catch"](0);
+
+                _this5.$globalFunc.errorAlert(_context4.t0.response);
+
+              case 12:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4, null, [[0, 9]]);
       }))();
     }
   }
@@ -5746,6 +5756,69 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5756,6 +5829,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       url: 'invoice/',
+      invoice_date: '',
+      menu1: false,
       headers: [{
         text: 'Invoice ID',
         value: 'invoice_id'
@@ -5790,11 +5865,45 @@ __webpack_require__.r(__webpack_exports__);
         align: 'center',
         sortable: false
       }],
+      headersItem: [{
+        text: 'Name',
+        value: 'product_name'
+      }, {
+        text: 'Description',
+        value: 'description'
+      }, {
+        text: 'Quantity',
+        value: 'quantity'
+      }, {
+        text: 'Base',
+        value: 'base'
+      }, {
+        text: 'Unit Price',
+        value: 'unit_price'
+      }, {
+        text: 'Total',
+        value: 'total'
+      }, {
+        text: 'Action',
+        value: 'actions',
+        width: '100px',
+        align: 'center',
+        sortable: false
+      }],
       form: {},
       loading: false,
       total: 0,
       options: {}
     };
+  },
+  methods: {
+    getData: function getData() {
+      var _this = this;
+
+      this.$nextTick(function () {
+        _this.$refs.dataTable.getData();
+      });
+    }
   }
 });
 
@@ -25814,9 +25923,11 @@ var render = function () {
         [
           _c(
             "div",
-            { staticClass: "d-flex justify-end mb-3" },
+            { staticClass: "d-flex justify-end mb-3 align-center flex-wrap" },
             [
               _c("v-spacer"),
+              _vm._v(" "),
+              _vm._t("other_filter"),
               _vm._v(" "),
               _vm.searchField
                 ? _c("v-text-field", {
@@ -25826,6 +25937,7 @@ var render = function () {
                       label: "Search",
                       "single-line": "",
                       dense: "",
+                      outlined: "",
                       "hide-details": "",
                     },
                     on: { keyup: _vm.getSearch },
@@ -25839,7 +25951,7 @@ var render = function () {
                   })
                 : _vm._e(),
             ],
-            1
+            2
           ),
           _vm._v(" "),
           _c("v-data-table", {
@@ -25857,6 +25969,11 @@ var render = function () {
             on: {
               "update:options": function ($event) {
                 _vm.options = $event
+              },
+              "click:row": function (item, slot) {
+                if (_vm.isExpand) {
+                  slot.expand(!slot.isExpanded)
+                }
               },
             },
             scopedSlots: _vm._u(
@@ -25889,7 +26006,7 @@ var render = function () {
                                 },
                               },
                             },
-                            [_vm._v("\n               Edit\n              ")]
+                            [_vm._v("\n              Edit\n            ")]
                           ),
                           _vm._v(" "),
                           _c(
@@ -25903,11 +26020,7 @@ var render = function () {
                                 },
                               },
                             },
-                            [
-                              _vm._v(
-                                "\n                    Delete\n                "
-                              ),
-                            ]
+                            [_vm._v("\n              Delete\n            ")]
                           ),
                         ],
                         1
@@ -25946,7 +26059,7 @@ var render = function () {
                     },
                     [
                       _vm._v(
-                        "\n                    Are you sure you want to delete this item?\n                "
+                        "\n            Are you sure you want to delete this item?\n          "
                       ),
                     ]
                   ),
@@ -26386,11 +26499,71 @@ var render = function () {
               url: _vm.url,
               tableHeadline: "Manage Employee",
               headers: _vm.headers,
-              addBtnLink: "addCountry",
-              editBtnLink: "editCountry",
-              app_name: "country",
+              otherFilter: { active: _vm.active },
+              "is-expand": "",
             },
             on: { updateModal: _vm.updateModal },
+            scopedSlots: _vm._u([
+              {
+                key: "other_filter",
+                fn: function () {
+                  return [
+                    _c("v-switch", {
+                      staticClass: "mx-4",
+                      attrs: { dense: "", inset: "", label: "Is Active" },
+                      on: {
+                        change: function ($event) {
+                          return _vm.getData()
+                        },
+                      },
+                      model: {
+                        value: _vm.active,
+                        callback: function ($$v) {
+                          _vm.active = $$v
+                        },
+                        expression: "active",
+                      },
+                    }),
+                  ]
+                },
+                proxy: true,
+              },
+              {
+                key: "item.status",
+                fn: function (ref) {
+                  var item = ref.item
+                  return [
+                    _c("v-switch", {
+                      attrs: { dense: "", inset: "" },
+                      on: {
+                        change: function ($event) {
+                          return _vm.toggleItem(item)
+                        },
+                      },
+                      model: {
+                        value: item.active,
+                        callback: function ($$v) {
+                          _vm.$set(item, "active", $$v)
+                        },
+                        expression: "item.active",
+                      },
+                    }),
+                  ]
+                },
+              },
+              {
+                key: "expanded-item",
+                fn: function (ref) {
+                  var headers = ref.headers
+                  var item = ref.item
+                  return [
+                    _c("td", { attrs: { colspan: headers.length } }, [
+                      _vm._v("\n          " + _vm._s(item) + "\n        "),
+                    ]),
+                  ]
+                },
+              },
+            ]),
           }),
         ],
         1
@@ -26736,28 +26909,6 @@ var render = function () {
                                         _vm.$set(_vm.form, "description", $$v)
                                       },
                                       expression: "form.description",
-                                    },
-                                  }),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-col",
-                                { attrs: { cols: "12" } },
-                                [
-                                  _c("v-checkbox", {
-                                    attrs: {
-                                      label: "Active",
-                                      color: "secondary",
-                                      value: "True",
-                                    },
-                                    model: {
-                                      value: _vm.form.active,
-                                      callback: function ($$v) {
-                                        _vm.$set(_vm.form, "active", $$v)
-                                      },
-                                      expression: "form.active",
                                     },
                                   }),
                                 ],
@@ -30209,7 +30360,7 @@ var render = function () {
               staticClass: "text-none",
               attrs: { small: "", color: "primary", to: "/invoice" },
             },
-            [_vm._v("\n      Create Invoice\n    ")]
+            [_vm._v("\n        Create Invoice\n      ")]
           ),
         ],
         1
@@ -30229,98 +30380,210 @@ var render = function () {
               addBtnLink: "addCountry",
               editBtnLink: "editCountry",
               app_name: "country",
+              "is-expand": "",
+              "other-filter": { invoice_date: _vm.invoice_date },
             },
-            on: { updateModal: _vm.updateModal },
-          }),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-dialog",
-        {
-          attrs: { "max-width": "600px", "overlay-opacity": "0.9" },
-          model: {
-            value: _vm.editModal,
-            callback: function ($$v) {
-              _vm.editModal = $$v
-            },
-            expression: "editModal",
-          },
-        },
-        [
-          _c(
-            "v-card",
-            [
-              _c(
-                "v-form",
-                {
-                  ref: "editForm",
-                  on: {
-                    submit: function ($event) {
-                      $event.preventDefault()
-                      return _vm.updateItem()
-                    },
-                  },
-                },
-                [
-                  _c(
-                    "v-card-title",
-                    { staticClass: "justify-end" },
-                    [
-                      _c("span", { staticClass: "text-h5" }, [
-                        _vm._v("Update Employee"),
-                      ]),
-                      _vm._v(" "),
-                      _c("v-spacer"),
-                      _vm._v(" "),
-                      _c(
-                        "v-btn",
-                        {
-                          staticClass: "text-none",
-                          attrs: { small: "", text: "" },
-                          on: {
-                            click: function ($event) {
-                              _vm.editModal = false
+            scopedSlots: _vm._u([
+              {
+                key: "other_filter",
+                fn: function () {
+                  return [
+                    _c(
+                      "v-menu",
+                      {
+                        attrs: {
+                          "close-on-content-click": false,
+                          "nudge-right": 40,
+                          transition: "scale-transition",
+                          "offset-y": "",
+                          "min-width": "auto",
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "activator",
+                            fn: function (ref) {
+                              var on = ref.on
+                              var attrs = ref.attrs
+                              return [
+                                _c(
+                                  "v-text-field",
+                                  _vm._g(
+                                    _vm._b(
+                                      {
+                                        staticClass: "mx-4",
+                                        staticStyle: { "max-width": "200px" },
+                                        attrs: {
+                                          label: "Date",
+                                          outlined: "",
+                                          dense: "",
+                                          "hide-details": "",
+                                          clearable: "",
+                                        },
+                                        on: {
+                                          keyup: function ($event) {
+                                            return _vm.getData()
+                                          },
+                                          input: function ($event) {
+                                            return _vm.getData()
+                                          },
+                                        },
+                                        model: {
+                                          value: _vm.invoice_date,
+                                          callback: function ($$v) {
+                                            _vm.invoice_date = $$v
+                                          },
+                                          expression: "invoice_date",
+                                        },
+                                      },
+                                      "v-text-field",
+                                      attrs,
+                                      false
+                                    ),
+                                    on
+                                  )
+                                ),
+                              ]
                             },
                           },
+                        ]),
+                        model: {
+                          value: _vm.menu1,
+                          callback: function ($$v) {
+                            _vm.menu1 = $$v
+                          },
+                          expression: "menu1",
                         },
-                        [_vm._v("\n            Close\n          ")]
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-card-text",
-                    [
-                      _c(
-                        "v-container",
-                        [
-                          _c(
-                            "v-btn",
-                            {
-                              staticClass: "text-none font-weight-bold",
-                              attrs: {
-                                color: "primary",
-                                type: "submit",
-                                small: "",
-                              },
+                      },
+                      [
+                        _vm._v(" "),
+                        _c("v-date-picker", {
+                          on: {
+                            input: function ($event) {
+                              ;(_vm.menu1 = false), _vm.getData()
                             },
-                            [_vm._v("\n              Submit\n            ")]
-                          ),
+                          },
+                          model: {
+                            value: _vm.invoice_date,
+                            callback: function ($$v) {
+                              _vm.invoice_date = $$v
+                            },
+                            expression: "invoice_date",
+                          },
+                        }),
+                      ],
+                      1
+                    ),
+                  ]
+                },
+                proxy: true,
+              },
+              {
+                key: "item.invoice_date",
+                fn: function (ref) {
+                  var item = ref.item
+                  return [
+                    _vm._v(
+                      "\n           " +
+                        _vm._s(
+                          _vm._f("moment")(item.invoice_date, "DD MMMM YYYY")
+                        ) +
+                        "\n         "
+                    ),
+                  ]
+                },
+              },
+              {
+                key: "expanded-item",
+                fn: function (ref) {
+                  var headers = ref.headers
+                  var item = ref.item
+                  return [
+                    _c("td", { attrs: { colspan: headers.length } }, [
+                      _c(
+                        "div",
+                        { staticClass: "black pa-4" },
+                        [
+                          _c("v-data-table", {
+                            attrs: {
+                              items: item.invoice,
+                              headers: _vm.headersItem,
+                              "hide-default-footer": "",
+                            },
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "item.actions",
+                                  fn: function (ref) {
+                                    var item = ref.item
+                                    return [
+                                      _c(
+                                        "div",
+                                        { staticClass: "d-flex" },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              staticClass: "mr-2 text-none",
+                                              attrs: {
+                                                "x-small": "",
+                                                color: "info",
+                                              },
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.$emit(
+                                                    "updateModal",
+                                                    item
+                                                  )
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                Edit\n              "
+                                              ),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              staticClass: "text-none",
+                                              attrs: {
+                                                "x-small": "",
+                                                color: "error",
+                                              },
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.deleteItem(item)
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                Delete\n              "
+                                              ),
+                                            ]
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ]
+                                  },
+                                },
+                              ],
+                              null,
+                              true
+                            ),
+                          }),
                         ],
                         1
                       ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
+                    ]),
+                  ]
+                },
+              },
+            ]),
+          }),
         ],
         1
       ),
@@ -101385,8 +101648,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\devghor\AMSL\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\devghor\AMSL\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\project\python\AMSL\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\project\python\AMSL\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

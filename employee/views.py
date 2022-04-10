@@ -21,8 +21,8 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
     filter_backends = (SearchFilter, OrderingFilter, DjangoFilterBackend)
-    search_fields = ('name', 'employee_id',)
     filterset_fields = ['category', 'active']
+    search_fields = ('name', 'employee_id',)
     ordering_fields = ('category',)
     ordering = ('-active')
     pagination_class = CustomPagination
