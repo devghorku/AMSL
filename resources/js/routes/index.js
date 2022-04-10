@@ -12,8 +12,9 @@ import Login from '../views/login'
 import Employee from "../views/employee"
 import EmployeeCategory from "../views/employeeCategory"
 import Payroll from "../views/payroll"
-import Invoice from "../views/invoice"
-import InvoiceItems from "../views/invoiceItem"
+import Invoice from "../views/invoice/create"
+import InvoiceView from "../views/invoice/view"
+import InvoiceList from "../views/invoice/list"
 
 
 // import globalFunc from '../services/helper'
@@ -97,9 +98,14 @@ const router = new VueRouter({
                     component: Invoice,
                 },
                 {
-                    path: 'invoice-items',
+                    path: 'invoice-list',
                     name: 'invoiceItems',
-                    component: InvoiceItems,
+                    component: InvoiceList,
+                },
+                {
+                    path: 'invoice-view',
+                    name: 'view',
+                    component: InvoiceView,
                 },
             ]
         },
