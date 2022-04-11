@@ -359,22 +359,5 @@ export default {
 }
 </script>
 <style lang="scss">
-.invoice {
-  .v-form {
-    .v-input{
-      font-size: 14px!important;
-    }
-    .v-input__slot {
-      min-height: 30px !important;
-      border-radius: 0 !important;
-      .v-text-field__slot {
-        .v-label {
-          font-size: 12px !important;
-          top: 6px !important;
-        }
-      }
-    }
-  }
-}
 
 </style>
