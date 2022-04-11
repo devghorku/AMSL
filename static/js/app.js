@@ -2474,10 +2474,10 @@ module.exports = {
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
   \*****************************************/
-/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, browser, bugs, bundleDependencies, bundlesize, dependencies, deprecated, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
+/*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, bundlesize, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"axios@^0.21.1\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"axios@^0.21.1\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"^0.21.1\",\"saveSpec\":null,\"fetchSpec\":\"^0.21.1\"},\"_requiredBy\":[\"/\",\"/localtunnel\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_shasum\":\"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575\",\"_spec\":\"axios@^0.21.1\",\"_where\":\"D:\\\\project\\\\python\\\\AMSL\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundleDependencies\":false,\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"deprecated\":false,\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
+module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"D:\\\\devghor\\\\AMSL\"]],\"_from\":\"axios@0.21.4\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.4\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.4\",\"saveSpec\":null,\"fetchSpec\":\"0.21.4\"},\"_requiredBy\":[\"/\",\"/localtunnel\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_spec\":\"0.21.4\",\"_where\":\"D:\\\\devghor\\\\AMSL\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
 
 /***/ }),
 
@@ -5537,6 +5537,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'create',
   data: function data() {
@@ -5575,7 +5581,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         text: 'Total',
         value: 'total',
         sortable: false,
-        width: '150px'
+        width: '150px',
+        align: 'right'
       }, {
         text: '',
         value: 'actions',
@@ -5603,6 +5610,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }]
       }
     };
+  },
+  computed: {
+    invoice_total: function invoice_total() {
+      var total = 0;
+      this.form.invoices.forEach(function (item) {
+        total = total + item.quantity * item.unit_price;
+      });
+      var sum = total + total * this.form.vat / 100 - this.form.discount;
+      return sum;
+    }
   },
   mounted: function mounted() {
     var _this = this;
@@ -6619,7 +6636,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".invoice .v-form .v-input__slot .v-text-field__slot .v-label {\n  font-size: 14px !important;\n}", ""]);
+exports.push([module.i, ".invoice .v-form .v-input {\n  font-size: 14px !important;\n}\n.invoice .v-form .v-input__slot {\n  min-height: 30px !important;\n  border-radius: 0 !important;\n}\n.invoice .v-form .v-input__slot .v-text-field__slot .v-label {\n  font-size: 12px !important;\n  top: 6px !important;\n}", ""]);
 
 // exports
 
@@ -30010,6 +30027,7 @@ var render = function () {
                               attrs: {
                                 outlined: "",
                                 dense: "",
+                                "hide-details": "",
                                 rules: [
                                   function (v) {
                                     return !!v || "Item is required"
@@ -30039,7 +30057,11 @@ var render = function () {
                           return [
                             _c("v-text-field", {
                               staticClass: "my-2",
-                              attrs: { outlined: "", dense: "" },
+                              attrs: {
+                                outlined: "",
+                                dense: "",
+                                "hide-details": "",
+                              },
                               model: {
                                 value: _vm.form.invoices[index].description,
                                 callback: function ($$v) {
@@ -30067,6 +30089,7 @@ var render = function () {
                                 outlined: "",
                                 dense: "",
                                 type: "number",
+                                "hide-details": "",
                                 rules: [
                                   function (v) {
                                     return !!v || "Item is required"
@@ -30096,7 +30119,12 @@ var render = function () {
                           return [
                             _c("v-text-field", {
                               staticClass: "my-2",
-                              attrs: { outlined: "", dense: "", type: "name" },
+                              attrs: {
+                                outlined: "",
+                                dense: "",
+                                type: "name",
+                                "hide-details": "",
+                              },
                               model: {
                                 value: _vm.form.invoices[index].base,
                                 callback: function ($$v) {
@@ -30124,6 +30152,7 @@ var render = function () {
                                 outlined: "",
                                 dense: "",
                                 type: "number",
+                                "hide-details": "",
                                 rules: [
                                   function (v) {
                                     return !!v || "Item is required"
@@ -30166,6 +30195,20 @@ var render = function () {
                                   [_vm._v("Delete\n            ")]
                                 )
                               : _vm._e(),
+                          ]
+                        },
+                      },
+                      {
+                        key: "item.total",
+                        fn: function (ref) {
+                          var item = ref.item
+                          var index = ref.index
+                          return [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(item.quantity * item.unit_price) +
+                                "\n          "
+                            ),
                           ]
                         },
                       },
@@ -30286,15 +30329,13 @@ var render = function () {
                     },
                   }),
                   _vm._v(" "),
-                  _c("v-text-field", {
-                    staticStyle: { "max-width": "200px" },
-                    attrs: {
-                      label: "Total",
-                      outlined: "",
-                      dense: "",
-                      readonly: "",
-                    },
-                  }),
+                  _c("div", { staticStyle: { "max-width": "200px" } }, [
+                    _vm._v(
+                      "\n        Total: " +
+                        _vm._s(_vm.invoice_total) +
+                        "\n        "
+                    ),
+                  ]),
                 ],
                 1
               ),
@@ -30501,9 +30542,10 @@ var render = function () {
                     _c("td", { attrs: { colspan: headers.length } }, [
                       _c(
                         "div",
-                        { staticClass: "black pa-4" },
+                        { staticClass: "pa-5" },
                         [
                           _c("v-data-table", {
+                            staticClass: "info--text",
                             attrs: {
                               items: item.invoice,
                               headers: _vm.headersItem,
@@ -101648,8 +101690,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\project\python\AMSL\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\project\python\AMSL\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\devghor\AMSL\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\devghor\AMSL\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
