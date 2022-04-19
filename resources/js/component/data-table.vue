@@ -27,6 +27,7 @@
             :options.sync="options"
             :server-items-length="total"
             class="elevation-1"
+            single-expand
             :footer-props="{'items-per-page-options': [10, 20, 30, 40, 50]}"
             @click:row="(item, slot) => {if(isExpand){slot.expand(!slot.isExpanded)}}"
         >

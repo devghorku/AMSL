@@ -2580,6 +2580,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     app_name: {
@@ -25962,6 +25963,7 @@ var render = function () {
               loading: _vm.loading,
               options: _vm.options,
               "server-items-length": _vm.total,
+              "single-expand": "",
               "footer-props": {
                 "items-per-page-options": [10, 20, 30, 40, 50],
               },
