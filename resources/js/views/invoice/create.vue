@@ -1,7 +1,7 @@
 <template>
   <v-container class="invoice mb-8">
     <v-form @submit.prevent="addInvoice"
-            ref="form">
+            ref="form" class="cus-input">
       <v-row class="mt-6">
         <v-col cols="12" sm="6" md="4">
           <v-text-field label="Client Name"

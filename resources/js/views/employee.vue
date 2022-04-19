@@ -44,7 +44,7 @@
     </v-card>
     <v-dialog v-model="addModal" max-width="600px" overlay-opacity="0.9">
       <v-card>
-        <v-form @submit.prevent="addItem()" ref="form">
+        <v-form @submit.prevent="addItem()" ref="form" class="cus-input">
           <v-card-title class="justify-end">
             <span class="text-h5">Add Employee</span>
             <v-spacer></v-spacer>
@@ -178,7 +178,7 @@
     </v-dialog>
     <v-dialog v-model="editModal" max-width="600px" overlay-opacity="0.9">
       <v-card>
-        <v-form @submit.prevent="updateItem()" ref="editForm">
+        <v-form @submit.prevent="updateItem()" ref="editForm" class="cus-input">
           <v-card-title class="justify-end">
             <span class="text-h5">Update Employee</span>
             <v-spacer></v-spacer>

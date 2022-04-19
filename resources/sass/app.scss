@@ -1,10 +1,9 @@
 @import "custom";
-$material-design-icons-font-directory-path: '~material-design-icons-iconfont/dist/fonts/';
-
-@import '~material-design-icons-iconfont/src/material-design-icons';
-body{
+@import '~@mdi/font/css/materialdesignicons.css';
+body {
   overflow-x: hidden;
 }
+
 .custom-table-adjust_top {
   .header-pane {
     .text-h5 {
@@ -15,52 +14,34 @@ body{
   }
 }
 
-  .v-form {
-    .v-input{
-      font-size: 14px!important;
-    }
-    .v-input__slot {
-      min-height: 30px !important;
-      border-radius: 0 !important;
-      .v-text-field__slot {
-        .v-label {
-          font-size: 12px !important;
-          top: 6px !important;
-        }
-      }
-    }
-    .v-select__slot{
-      .v-input__append-inner{
-        margin-top:3px !important;
-      }
+
+.cus-input {
+  font-size: 14px !important;
+
+  .v-input__slot {
+    min-height: 30px !important;
+    border-radius: 0 !important;
+
+    .v-text-field__slot {
       .v-label {
-          font-size: 12px !important;
-          top: 6px !important;
-        }
+        font-size: 12px !important;
+        top: 8px !important;
+      }
     }
   }
-.v-input{
-      font-size: 14px!important;
+
+  .v-input__append-inner {
+    margin-top: 4px !important;
+  }
+
+  .v-select__slot {
+    .v-input__append-inner {
+      margin-top: 3px !important;
     }
-    .v-input__slot {
-      min-height: 30px !important;
-      border-radius: 0 !important;
-      .v-text-field__slot {
-        .v-label {
-          font-size: 12px !important;
-          top: 6px !important;
-        }
-      }
-      .v-input__append-inner{
-        margin-top:4px !important;
-      }
+
+    .v-label {
+      font-size: 12px !important;
+      top: 8px !important;
     }
-    .v-select__slot{
-      .v-input__append-inner{
-        margin-top:3px !important;
-      }
-      .v-label {
-          font-size: 12px !important;
-          top: 6px !important;
-        }
-    }
+  }
+}
