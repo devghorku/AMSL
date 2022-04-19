@@ -142,6 +142,7 @@
               <v-text-field outlined
                             dense
                             class="my-2"
+                            hide-details
                             :rules="[v=> !!v || 'Item is required']"
                             v-model="form.invoices[index].product_name"
               >
@@ -151,6 +152,7 @@
               <v-text-field outlined
                             dense
                             class="my-2"
+                            hide-details
                             v-model="form.invoices[index].description"
               >
               </v-text-field>
@@ -160,6 +162,7 @@
                             dense
                             class="my-2"
                             type="number"
+                            hide-details
                             :rules="[v=> !!v || 'Item is required']"
                             v-model="form.invoices[index].quantity"
               >
@@ -170,6 +173,7 @@
                             dense
                             class="my-2"
                             type="name"
+                            hide-details
                             v-model="form.invoices[index].base"
               >
               </v-text-field>
@@ -179,6 +183,7 @@
                             dense
                             class="my-2"
                             type="number"
+                            hide-details
                             :rules="[v=> !!v || 'Item is required']"
                             v-model="form.invoices[index].unit_price"
               >
@@ -189,6 +194,9 @@
                      v-if="form.invoices.length>1"
                      @click="removeInvoices(index)">Delete
               </v-btn>
+            </template>
+            <template v-slot:item.total="{ item,index }">
+              {{item.quantity*item.unit_price}}
             </template>
           </v-data-table>
 
@@ -235,13 +243,11 @@
                         v-model="form.due"
           >
           </v-text-field>
-          <v-text-field label="Total"
-                        outlined
-                        dense
-                        readonly
+          <div
                         style="max-width: 200px"
           >
-          </v-text-field>
+          Total: {{invoice_total}}
+          </div>
         </v-col>
       </v-row>
       <div class="justify-center text-center">
@@ -281,7 +287,7 @@ export default {
         {text: 'Quantity', value: 'quantity', sortable: false, width: '150px',},
         {text: 'Base', value: 'base', sortable: false, width: '150px',},
         {text: 'Unit Price', value: 'unit_price', sortable: false, width: '150px',},
-        {text: 'Total', value: 'total', sortable: false, width: '150px',},
+        {text: 'Total', value: 'total', sortable: false, width: '150px', align: 'right'},
         {text: '', value: 'actions', sortable: false, width: '80px',},
       ],
       form: {
@@ -306,6 +312,16 @@ export default {
           }
         ]
       },
+    }
+  },
+  computed:{
+    invoice_total(){
+      let total=0;
+      this.form.invoices.forEach((item)=>{
+        total=total+(item.quantity*item.unit_price)
+      })
+      let sum=total+(total*this.form.vat/100)-this.form.discount
+      return sum;
     }
   },
   async mounted() {
@@ -343,16 +359,5 @@ export default {
 }
 </script>
 <style lang="scss">
-.invoice {
-  .v-form {
-    .v-input__slot {
-      .v-text-field__slot {
-        .v-label {
-          font-size: 14px !important;
-        }
-      }
-    }
-  }
-}
 
 </style>

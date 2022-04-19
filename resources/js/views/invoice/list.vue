@@ -53,8 +53,8 @@
          </template>
         <template v-slot:expanded-item="{ headers,item  }">
           <td :colspan="headers.length">
-            <div class="black pa-4">
-              <v-data-table :items="item.invoice" :headers="headersItem" hide-default-footer>
+            <div class="pa-5">
+              <v-data-table :items="item.invoice" :headers="headersItem" hide-default-footer class="info--text">
                   <template v-slot:item.actions="{ item }">
             <div class="d-flex">
               <v-btn x-small
